@@ -16,10 +16,19 @@
 }
 
 .navbar-image-container {
-    padding-top: 20px;
+    padding-top: 20%;
 }
 
 .navbar-link-container {
-    margin-top: 20%;
+    margin-top: 40%;
     justify-items: center;
+}
+
+.navBar-icon-container {
+    justify-items: center;
+    margin-top: 60%;
+}
+
+.nav-icon-link {
+    display: inline;
 }
