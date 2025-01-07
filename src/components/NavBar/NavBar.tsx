@@ -48,7 +48,7 @@ const NavBar = () => {
                 </Link>
             </Container>
 
-            <div className="navBar-icon-container">  
+            <Container className="navBar-icon-container">  
                     <Col>
                         <LinkedInLink className="nav-icon-link linkedin"/>
                         <Tooltip anchorSelect=".linkedin" place="top">
@@ -71,7 +71,7 @@ const NavBar = () => {
                             View My Resume
                         </Tooltip>
                     </Col>
-            </div>
+            </Container>
             
         </Container>
     )

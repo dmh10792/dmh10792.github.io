@@ -1,6 +1,7 @@
 //Components
 import { Container } from "react-bootstrap";
-import Image from 'react-bootstrap/Image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 interface props {
     className: string
@@ -10,7 +11,7 @@ const GithubLink = ({className}: props) => {
 
     return (
         <Container className={`${className}`}>
-            <Image src="src/assets/icons/github-icon.png" roundedCircle />
+            <FontAwesomeIcon icon={faGithub} size="2x"/>
         </Container>
     )
 }

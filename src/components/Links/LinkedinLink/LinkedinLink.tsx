@@ -1,6 +1,7 @@
 //Components
 import { Container } from "react-bootstrap";
-import Image from 'react-bootstrap/Image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 
 
 interface props {
@@ -13,7 +14,7 @@ const LinkedInLink = ({className}: props) => {
         <Container 
             className={`${className}`}
         >
-            <Image src="src/assets/icons/linkedin-icon.png" roundedCircle />
+            <FontAwesomeIcon icon={faLinkedinIn} size="2x"/>
         </Container>
     )
 }

@@ -1,6 +1,7 @@
 //Components
 import { Container } from "react-bootstrap";
-import Image from 'react-bootstrap/Image';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faXTwitter } from "@fortawesome/free-brands-svg-icons";
 
 interface props {
     className: string
@@ -10,7 +11,7 @@ const TwitterLink = ({className}: props) => {
 
     return (
         <Container className={`${className}`}>
-            <Image src="src/assets/icons/x-icon.png" rounded />
+            <FontAwesomeIcon icon={faXTwitter} className="navBar-icon" size="2x"/>
         </Container>
     )
 }
