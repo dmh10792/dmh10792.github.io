@@ -46,7 +46,6 @@ const NavBar = () => {
                     <FontAwesomeIcon icon={faDiagramProject} className="navBar-icon"/>
                     Projects
                 </Link>
-                <Link to={'/contact'} className="navBar-link">Contact</Link>
             </Container>
 
             <div className="navBar-icon-container">  

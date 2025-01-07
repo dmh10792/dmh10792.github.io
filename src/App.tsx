@@ -5,12 +5,13 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 
 //PAGES
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import About from './pages/About';
 import Skills from './pages/Skills';
 import Experience from './pages/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import ContactButton from './components/ContactButton/ContactButton';
 
 //CSS
 import './App.css'
@@ -26,6 +27,7 @@ function App() {
           <NavBar/>
         </div>
         <div className='col-lg-10'>
+          <ContactButton/>
           <Routes>
             <Route index element={<Home/>}/>
             <Route path='/' element={<Home/>}/> 
