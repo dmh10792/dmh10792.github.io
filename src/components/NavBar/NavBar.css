@@ -6,13 +6,23 @@
 
 .navBar-link {
     display: block;
-    /*border: red 1px solid;*/
+    /* border: red 1px solid; */
     width: 90%;
     height: 3em;
     text-align: center;
     text-decoration: none;
-    margin-bottom: 10%;
+    color: black;
+    font-size: larger;
+    margin-bottom: 5%;
     padding-top: 5%;
+}
+
+.navBar-icon {
+    margin-right: 10%;
+}
+
+.navBar-link:hover {
+    background-color: rgba(154, 153, 153, 0.366);
 }
 
 .navbar-image-container {
@@ -31,4 +41,10 @@
 
 .nav-icon-link {
     display: inline;
+    padding-top: 6%;
+    padding-bottom: 10%;
+}
+
+.nav-icon-link:hover {
+    background-color: rgba(154, 153, 153, 0.366);
 }
