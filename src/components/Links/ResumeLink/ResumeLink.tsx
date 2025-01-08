@@ -10,9 +10,9 @@ interface props {
 const ResumeLink = ({className}: props) => {
 
     return (
-        <Container className={`${className}`}>
+        <div className={`${className}`}>
             <FontAwesomeIcon icon={faFile} size="2x"/>
-        </Container>
+        </div>
     )
 }
 

@@ -10,9 +10,9 @@ interface props {
 const GithubLink = ({className}: props) => {
 
     return (
-        <Container className={`${className}`}>
+        <div className={`${className}`}>
             <FontAwesomeIcon icon={faGithub} size="2x"/>
-        </Container>
+        </div>
     )
 }
 

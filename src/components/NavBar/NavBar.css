@@ -43,6 +43,7 @@
     display: inline;
     padding-top: 6%;
     padding-bottom: 10%;
+    width: fit-content;
 }
 
 .nav-icon-link:hover {

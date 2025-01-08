@@ -11,11 +11,11 @@ interface props {
 const LinkedInLink = ({className}: props) => {
 
     return (
-        <Container 
+        <div
             className={`${className}`}
         >
             <FontAwesomeIcon icon={faLinkedinIn} size="2x"/>
-        </Container>
+        </div>
     )
 }
 
