@@ -50,6 +50,7 @@ const NavBar = () => {
 
             <div className="navBar-icon-container">  
                     
+                    <div className="nav-icon-row">
                         <LinkedInLink className="nav-icon-link linkedin"/>
                         <Tooltip anchorSelect=".linkedin" place="top">
                             My LinkedIn Profile
@@ -59,10 +60,10 @@ const NavBar = () => {
                         <Tooltip anchorSelect=".twitter" place="top">
                             My X Profile
                         </Tooltip> 
-                    
+                    </div>
             
                     
-                    
+                    <div className="nav-icon-row">
                         <GithubLink className="nav-icon-link github"/>
                         <Tooltip anchorSelect=".github" place="bottom">
                             My Github Profile
@@ -72,7 +73,7 @@ const NavBar = () => {
                         <Tooltip anchorSelect=".resume" place="bottom">
                             View My Resume
                         </Tooltip>
-                    
+                    </div>
             </div>
             
         </Container>
