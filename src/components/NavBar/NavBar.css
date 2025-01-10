@@ -2,6 +2,8 @@
     background-color: #CFCFCF;
     height: 100%;
     justify-items: center;
+    box-shadow: 5px 3px 5px black;
+    border-radius: 1%;
 }
 
 .navBar-link {
@@ -27,6 +29,11 @@
 
 .navbar-image-container {
     padding-top: 20%;
+}
+
+.profile-image {
+    border: #8c59aa 3px solid;
+    box-shadow: 5px 3px 5px black;
 }
 
 .navbar-link-container {
@@ -58,7 +65,7 @@
 }
 
 .active {
-    border: #562373 2px solid;
-    color: #562373;
+    border: #8c59aa 2px solid;
+    color: #8c59aa;
     box-shadow: 2px 2px 5px black;
 }

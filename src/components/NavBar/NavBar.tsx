@@ -21,7 +21,7 @@ const NavBar = () => {
         <Container className="navBar-body">
             
             <div className="navbar-image-container">
-                <Image src="src/assets/images/ProfileImage.jpg" roundedCircle />
+                <Image className="profile-image" src="src/assets/images/ProfileImage.jpg" roundedCircle />
             </div>
             
             <Container className="navbar-link-container">
