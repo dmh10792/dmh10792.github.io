@@ -1,5 +1,4 @@
 //Components
-import { Container } from "react-bootstrap";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFile } from "@fortawesome/free-solid-svg-icons";
 
@@ -9,8 +8,12 @@ interface props {
 
 const ResumeLink = ({className}: props) => {
 
+    const openResume = () => {
+        window.open("src/assets/docs/resume.pdf", "_blank", "noreferrer");
+    }
+
     return (
-        <div className={`${className}`}>
+        <div className={`${className}`} onClick={openResume}>
             <FontAwesomeIcon icon={faFile} size="2x"/>
         </div>
     )

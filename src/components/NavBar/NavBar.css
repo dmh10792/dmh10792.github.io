@@ -6,15 +6,15 @@
 
 .navBar-link {
     display: block;
-    /* border: red 1px solid; */
-    width: 90%;
+    width: 75%;
     height: 3em;
     text-align: center;
     text-decoration: none;
     color: black;
     font-size: larger;
+    align-content: center;
     margin-bottom: 5%;
-    padding-top: 5%;
+    border-radius: 5%;
 }
 
 .navBar-icon {
@@ -55,4 +55,10 @@
 
 .nav-icon-link:hover {
     background-color: rgba(154, 153, 153, 0.366);
+}
+
+.active {
+    border: #562373 2px solid;
+    color: #562373;
+    box-shadow: 2px 2px 5px black;
 }

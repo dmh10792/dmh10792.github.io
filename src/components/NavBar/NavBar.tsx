@@ -1,6 +1,5 @@
 //Utilities
-import { Link } from "react-router-dom";
-import { Col } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 import Container from 'react-bootstrap/Container';
 
 //Components
@@ -26,32 +25,39 @@ const NavBar = () => {
             </div>
             
             <Container className="navbar-link-container">
-                <Link to={'/'} className="navBar-link">
+                <NavLink to={'/'} className={({isActive, isPending}) => 
+                    isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
                     <FontAwesomeIcon icon={faHouse} className="navBar-icon"/>
                     Home
-                </Link>
-                <Link to={'/about'} className="navBar-link">
+                </NavLink>
+                <NavLink to={'/about'} className={({isActive, isPending}) => 
+                    isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
                     <FontAwesomeIcon icon={faUser} className="navBar-icon"/>
                     About
-                </Link>
-                <Link to={'/skills'} className="navBar-link">
+                </NavLink>
+                <NavLink to={'/skills'} className={({isActive, isPending}) => 
+                    isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
                     <FontAwesomeIcon icon={faScrewdriverWrench} className="navBar-icon"/>
                     Skills
-                </Link>
-                <Link to={'/experience'} className="navBar-link">
+                </NavLink>
+                <NavLink to={'/experience'} 
+                    className={({isActive, isPending}) => 
+                        isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} 
+                >
                     <FontAwesomeIcon icon={faBriefcase} className="navBar-icon"/>
                     Experience
-                </Link>
-                <Link to={'/projects'} className="navBar-link">
+                </NavLink>
+                <NavLink to={'/projects'} className={({isActive, isPending}) => 
+                    isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
                     <FontAwesomeIcon icon={faDiagramProject} className="navBar-icon"/>
                     Projects
-                </Link>
+                </NavLink>
             </Container>
 
             <div className="navBar-icon-container">  
                     
                     <div className="nav-icon-row">
-                        <LinkedInLink className="nav-icon-link linkedin"/>
+                        <LinkedInLink className="nav-icon-link linkedin" />
                         <Tooltip anchorSelect=".linkedin" place="top">
                             My LinkedIn Profile
                         </Tooltip>

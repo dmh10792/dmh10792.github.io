@@ -8,8 +8,12 @@ interface props {
 
 const TwitterLink = ({className}: props) => {
 
+    const openTwitter = () => {
+        window.open("https://x.com/N3xusMaximus", "_blank", "noreferrer");
+    }
+
     return (
-        <div className={`${className}`} >
+        <div className={`${className}`} onClick={openTwitter}>
             <FontAwesomeIcon icon={faXTwitter} className="navBar-icon" size="2x"/>
         </div>
     )
