@@ -12,7 +12,7 @@ import './Home.css';
 
 const Home = () => { 
 
-    const images :ReactElement[] = [];
+    const images :React.ReactElement[] = [];
 
     useEffect(() => {
         let urls  :string[]= [];
