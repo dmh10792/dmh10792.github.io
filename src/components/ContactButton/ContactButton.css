@@ -1,6 +1,6 @@
 .contact-containter {
-    display: block;
-    padding-top: 2%;
+    padding-top: 1%;
+    position: absolute;
 }
 
 .contactButton-containter {
