@@ -8,7 +8,7 @@ import NavBar from './components/NavBar/NavBar';
 import Home from './pages/Home/Home';
 import About from './pages/About/About';
 import Skills from './pages/Skills';
-import Experience from './pages/Experience';
+import Experience from './pages/Experience/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
 import ContactButton from './components/ContactButton/ContactButton';

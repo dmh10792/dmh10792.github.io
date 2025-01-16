@@ -1,0 +1,10 @@
+.timeline-container {
+    max-height: 47%;
+    overflow-y: scroll;
+    -ms-overflow-style: none; 
+    scrollbar-width: none; 
+}
+
+.timeline-container::-webkit-scrollbar {
+    display: none;
+}
