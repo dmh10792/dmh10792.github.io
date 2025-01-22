@@ -23,10 +23,10 @@ function App() {
   return (
     <div className='row app-container'>
       <BrowserRouter>
-        <div className='col-lg-2'>
+        <div className='col-lg-2 '>
           <NavBar/>
         </div>
-        <div className='col-lg-10'>
+        <div className='col-lg-10 page-container'>
           <ContactButton/>
           <Routes>
             <Route index element={<Home/>}/>

@@ -1,10 +1,19 @@
+.experience-container {
+    height: 95%;
+}
+
 .timeline-container {
-    max-height: 47%;
+    max-height: 100%;
     overflow-y: scroll;
     -ms-overflow-style: none; 
     scrollbar-width: none; 
+    
 }
 
 .timeline-container::-webkit-scrollbar {
     display: none;
+}
+
+.experience-image {
+    max-width: 100%;
 }
