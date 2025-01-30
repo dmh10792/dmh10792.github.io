@@ -16,7 +16,7 @@ const About = () => {
     const [images, setImages] = useState<React.ReactElement[]>([]);
 
     useEffect(() => {
-       let temp: React.ReactElement[] = imageArray.map((image) => {
+       const temp: React.ReactElement[] = imageArray.map((image) => {
             return (<Image 
                         className="grid-image" 
                         src={image.thumbNailURL} 

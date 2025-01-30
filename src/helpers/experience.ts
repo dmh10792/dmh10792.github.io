@@ -118,7 +118,7 @@ export const experiences : JobExperience[] = [
                 destinations throughout Europe. Ensuring each transport complied with the
                 destination country's hazardous materials regulations.`
         ],
-        picture: `${commonPath}/173rd/173hq.jpeg`,
+        picture: `${commonPath}/173rd/173rd.jpg`,
         icon: faEarthEurope
     },
     {

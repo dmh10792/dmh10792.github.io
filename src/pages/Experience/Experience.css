@@ -1,5 +1,5 @@
 .experience-container {
-    height: 95%;
+    height: 94%;
 }
 
 .timeline-container {
@@ -16,4 +16,6 @@
 
 .experience-image {
     max-width: 100%;
+    text-align: center;
 }
+

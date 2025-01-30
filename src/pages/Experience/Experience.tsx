@@ -4,25 +4,27 @@ import { experiences } from '../../helpers/experience';
 
 //Components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse } from '@fortawesome/free-solid-svg-icons';
 
 //CSS
 import 'react-vertical-timeline-component/style.min.css';
 import './Experience.css';
+import { JobExperience } from '../../types';
 
 const Experience = () => {
 
-    const history :React.ReactElement[]= experiences.map((experience) => {
+    const history :React.ReactElement[]= experiences.map((experience, key) => {
 
         const dateRange :string = `${experience.startDate} - ${experience.endDate}`
         return (
             <VerticalTimelineElement
-                className="experience-element"
+                key={key}
+                className="experience-element" 
                 contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                 date={dateRange}
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 icon={<FontAwesomeIcon icon={experience.icon} className="experience-icon"/>}
+                onTimelineElementClick={()=>handleClick(experience)}
             >
                 <img className='experience-image'  src={experience.picture}/>
                 <h3 className="experience-title">{experience.title}</h3>
@@ -38,6 +40,11 @@ const Experience = () => {
             </VerticalTimelineElement>
         )
     })
+
+    const handleClick = (experience: JobExperience) => {
+        console.log(experience.title);
+        //This is where I will put the logic for opening the modal
+    }
 
     return (
         <div className='experience-container'>

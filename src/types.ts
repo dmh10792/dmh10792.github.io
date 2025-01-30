@@ -8,5 +8,10 @@ export type JobExperience = {
     description: string,
     accomplishments: string[],
     picture?: string,
-    icon: IconProp
+    icon: IconProp,
+}
+
+export type SkillType = {
+    name: string,
+    imageURL: string,
 }
