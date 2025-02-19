@@ -16,11 +16,12 @@ const About = () => {
     const [images, setImages] = useState<React.ReactElement[]>([]);
 
     useEffect(() => {
-       const temp: React.ReactElement[] = imageArray.map((image) => {
+       const temp: React.ReactElement[] = imageArray.map((image, key) => {
             return (<Image 
                         className="grid-image" 
                         src={image.thumbNailURL} 
                         alt={image.imagePath} 
+                        key={key}
                         onClick={() => {
                             handleImageClick({thumbNailURL: image.thumbNailURL, imagePath: image.imagePath});
                         }} 
