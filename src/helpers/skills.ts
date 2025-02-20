@@ -22,51 +22,51 @@ export const skills :SkillType[] = [
     },
     {
         name: 'HTML',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/html-logo.png`,
     },
     {
         name: 'CSS',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/css-logo.png`,
     },
     {
         name: 'SQL',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/sql-logo.png`,
     },
     {
         name: 'C++',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/cpp-logo.png`,
     },
     {
         name: 'C#',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/csharp-logo.png`,
     },
     {
         name: 'Flutter',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/flutter-logo.png`,
     },
     {
         name: 'Dart',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/dart-logo.png`,
     },
     {
         name: 'Python',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/python-logo.png`,
     },
     {
         name: 'Database Management',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/dbm-logo.png`,
     },
     {
         name: 'Spring',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/spring-logo.png`,
     },
     {
         name: 'Test-Driven Development',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/tdd-logo.png`,
     },
     {
         name: 'Curriculum Development',
-        imageURL: `${commonPath}/reactIcon.png`,
+        imageURL: `${commonPath}/curriculum-logo.png`,
     },
     {
         name: 'Facilitation',
@@ -101,7 +101,7 @@ export const skills :SkillType[] = [
         imageURL: `${commonPath}/reactIcon.png`,
     },
     {
-        name: 'Policy and Procedure Development',
+        name: 'Policy Development',
         imageURL: `${commonPath}/reactIcon.png`,
     },
     {

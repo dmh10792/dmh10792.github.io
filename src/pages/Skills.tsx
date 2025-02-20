@@ -13,11 +13,12 @@ const Skills = () => {
                 alignContent: 'center',
                 textAlign: 'center',
                 display: 'block',
-                maxHeight: '100%',
+                maxHeight: '91%',
                 marginTop: '6%',
                 overflowY: 'scroll',
                 msOverflowStyle: 'none',
                 scrollbarWidth: 'none',
+                paddingBottom: '2%'
             }}>
                 {skillComponents}
             </div>

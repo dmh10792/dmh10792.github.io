@@ -7,23 +7,31 @@ type props = {
 const SkillBox = ({skill} :props) => {
 
     let fontSize :string;
+    let margin :string;
+    const smallImages :string[] = ['Typescript', 'Flutter', 'Spring']
 
     if(skill.name.length >= 30) {
         fontSize = '16px';
-    } else if(skill.name.length >= 22) {
+    } else if(skill.name.length >= 20) {
         fontSize = '18px';
     }else {
         fontSize = '20px';
+    }
+
+    if(smallImages.includes(skill.name)) {
+        margin = '12% 0% 12% 0%';
+    } else {
+        margin = '0%';
     }
 
     return (
         <div
             style={{
                 backgroundColor: '#CFCFCF',
-                //border: '1px black solid',
                 borderRadius: '15%',
                 width: '20%',
                 height: '20%',
+                minHeight: '20%',
                 padding: '1% 1% 0% 1%',
                 textAlign: 'center',
                 display: 'inline-block',
@@ -37,6 +45,7 @@ const SkillBox = ({skill} :props) => {
                     height: '100%',
                     width: '100%',
                     marginBottom: '8%',
+                    margin: `${margin}`
                 }}
             />
             <h3
