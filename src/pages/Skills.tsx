@@ -18,7 +18,8 @@ const Skills = () => {
                 overflowY: 'scroll',
                 msOverflowStyle: 'none',
                 scrollbarWidth: 'none',
-                paddingBottom: '2%'
+                paddingBottom: '2%',
+                border: '2px solid red'
             }}>
                 {skillComponents}
             </div>

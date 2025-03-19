@@ -30,20 +30,21 @@ const SkillBox = ({skill} :props) => {
                 backgroundColor: '#CFCFCF',
                 borderRadius: '15%',
                 width: '20%',
-                height: '20%',
-                minHeight: '20%',
+                maxHeight: '40vh',
+                minHeight: '30vh',
                 padding: '1% 1% 0% 1%',
                 textAlign: 'center',
                 display: 'inline-block',
-                margin: '1% 1% 0 1%'
+                margin: '1% 1% 0 1%',
+                alignContent: 'center',
             }}
         >
             <img 
                 src={skill.imageURL} 
                 alt="" 
                 style={{
-                    height: '100%',
-                    width: '100%',
+                    height: '50%',
+                    width: '60%',
                     marginBottom: '8%',
                     margin: `${margin}`
                 }}
