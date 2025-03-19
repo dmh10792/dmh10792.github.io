@@ -4,6 +4,7 @@
     justify-items: center;
     box-shadow: 5px 3px 5px black;
     border-radius: 1%;
+    width: 30%;
 }
 
 .navBar-link {
