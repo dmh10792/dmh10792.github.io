@@ -20,7 +20,7 @@ const NavBar = () => {
 
     // const initialState = ;
     const [width, setWidth] = useState(window.innerWidth);
-
+    const [drawerVariant, setVariant] = useState<'permanent' | 'persistent' | 'temporary'>('permanent');
     const [open, setOpen] = useState(false);
 
     const toggleDrawer = (newOpen: boolean) => () => {
@@ -37,8 +37,10 @@ const NavBar = () => {
         setWidth(window.innerWidth);
         if(window.innerWidth >= 1024) {
             setOpen(true);
+            setVariant("persistent");
         } else {
             setOpen(false);
+            setVariant("temporary");
         }
     }
 
@@ -62,6 +64,7 @@ const NavBar = () => {
                 open={open} 
                 onClose={toggleDrawer(false)}
                 className="navBar-drawer"
+                variant={drawerVariant}
                 BackdropProps={{ invisible: true }}
             >
                 <div className="navbar-image-container">

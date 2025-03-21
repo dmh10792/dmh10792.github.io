@@ -69,6 +69,7 @@
 .navBar-icon-container {
     justify-items: center;
     margin-top: 20%;
+    align-self: center;
 }
 
 .nav-icon-row {
