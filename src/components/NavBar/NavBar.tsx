@@ -1,5 +1,6 @@
 //Utilities
 import { NavLink } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 //Components
 import Image from 'react-bootstrap/Image';
@@ -8,18 +9,17 @@ import GithubLink from "../Links/GithubLink/GithubLink";
 import TwitterLink from "../Links/TwitterLink/TwitterLink";
 import ResumeLink from "../Links/ResumeLink/ResumeLink";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faUser, faScrewdriverWrench, faBriefcase, faDiagramProject, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faUser, faScrewdriverWrench, faBriefcase, faDiagramProject, faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Tooltip } from 'react-tooltip';
 import { Button, Drawer} from '@mui/material';
 
 //CSS
 import './NavBar.css'
-import { useEffect, useState } from "react";
+
 
 const NavBar = () => {
 
-    // const initialState = ;
-    const [width, setWidth] = useState(window.innerWidth);
+    const [_width, setWidth] = useState(window.innerWidth);
     const [drawerVariant, setVariant] = useState<'permanent' | 'persistent' | 'temporary'>('permanent');
     const [open, setOpen] = useState(false);
 
@@ -98,6 +98,11 @@ const NavBar = () => {
                         isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
                         <FontAwesomeIcon icon={faDiagramProject} className="navBar-icon"/>
                         Projects
+                    </NavLink>
+                    <NavLink to={'/contact'} onClick={handleNav} className={({isActive, isPending}) => 
+                        isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
+                        <FontAwesomeIcon icon={faEnvelope} className="navBar-icon"/>
+                        Contact Me
                     </NavLink>
                 </div>
 

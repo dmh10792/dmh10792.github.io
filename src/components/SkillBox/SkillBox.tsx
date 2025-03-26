@@ -1,3 +1,4 @@
+import { Card, CardContent } from "@mui/material";
 import { SkillType } from "../../types";
 
 type props = {
@@ -25,41 +26,41 @@ const SkillBox = ({skill} :props) => {
     }
 
     return (
-        <div
-            style={{
-                backgroundColor: '#CFCFCF',
-                borderRadius: '15%',
-                width: '20%',
-                maxHeight: '40vh',
-                minHeight: '30vh',
-                padding: '1% 1% 0% 1%',
-                textAlign: 'center',
-                display: 'inline-block',
-                margin: '1% 1% 0 1%',
-                alignContent: 'center',
+        <Card 
+            sx={{
+                borderRadius: '5%',
+                margin: '2%',
+                boxShadow: '5px 3px 5px black',
+                maxWidth: '90%',
+                minHeight: '100%',
             }}
+
         >
-            <img 
-                src={skill.imageURL} 
-                alt="" 
-                style={{
-                    height: '50%',
-                    width: '60%',
-                    marginBottom: '8%',
-                    margin: `${margin}`
-                }}
-            />
-            <h3
-                style={{
-                    fontWeight: '500',
-                    fontSize: `${fontSize}`,
-                    overflow: 'clip',
+            <CardContent
+                sx={{
+                    justifyItems: 'center',
+                    alignContent: 'center',
+                    textAlign: 'center'
                 }}
             >
-                {skill.name}
-            </h3>
-        
-        </div>
+                <img 
+                    src={skill.imageURL}
+                    style={{
+                        height: '50%',
+                        width: '60%',
+                        marginBottom: '10%',
+                    }}
+                />
+                <h3
+                    style={{
+                        fontWeight: '500',
+                        fontSize: `${fontSize}`,
+                    }}
+                >
+                    {skill.name}
+                </h3>
+            </CardContent>
+        </Card>
     )
 }
 

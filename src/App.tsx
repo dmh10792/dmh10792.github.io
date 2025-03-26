@@ -11,7 +11,7 @@ import Skills from './pages/Skills';
 import Experience from './pages/Experience/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
-import ContactButton from './components/ContactButton/ContactButton';
+
 
 //CSS
 import './App.css'
@@ -26,8 +26,7 @@ function App() {
         <div className='col-lg-2 '>
           <NavBar/>
         </div>
-        <div className='col-lg-10 page-container'>
-          <ContactButton/>
+        <div className='col-lg-10 page-container'> 
           <Routes>
             <Route index element={<Home/>}/>
             <Route path='/' element={<Home/>}/> 

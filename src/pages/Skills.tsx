@@ -1,27 +1,26 @@
+import Grid from "@mui/material/Grid";
 import SkillBox from "../components/SkillBox/SkillBox";
 import { skills } from "../helpers/skills";
 
 const Skills = () => {
 
     const skillComponents = skills.map((skill, key) => {
-        return <SkillBox key={key} skill={skill}/>
+        return <Grid item xs={3} ><SkillBox key={key} skill={skill}/></Grid>
     })
 
     return (
         <>
             <div style={{
-                alignContent: 'center',
-                textAlign: 'center',
-                display: 'block',
-                maxHeight: '91%',
-                marginTop: '6%',
+                maxHeight: '98%',
+                marginTop: '2%',
                 overflowY: 'scroll',
                 msOverflowStyle: 'none',
                 scrollbarWidth: 'none',
-                paddingBottom: '2%',
-                border: '2px solid red'
+                marginLeft: '3%',
             }}>
-                {skillComponents}
+                <Grid container spacing={2}>
+                    {skillComponents}
+                </Grid>
             </div>
         </>
     )
