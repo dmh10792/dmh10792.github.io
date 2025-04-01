@@ -8,8 +8,6 @@ type props = {
 const SkillBox = ({skill} :props) => {
 
     let fontSize :string;
-    let margin :string;
-    const smallImages :string[] = ['Typescript', 'Flutter', 'Spring']
 
     if(skill.name.length >= 30) {
         fontSize = '16px';
@@ -17,12 +15,6 @@ const SkillBox = ({skill} :props) => {
         fontSize = '18px';
     }else {
         fontSize = '20px';
-    }
-
-    if(smallImages.includes(skill.name)) {
-        margin = '12% 0% 12% 0%';
-    } else {
-        margin = '0%';
     }
 
     return (
