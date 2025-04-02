@@ -5,7 +5,7 @@ import { skills } from "../helpers/skills";
 const Skills = () => {
 
     const skillComponents = skills.map((skill, key) => {
-        return <Grid item xs={3} ><SkillBox key={key} skill={skill}/></Grid>
+        return <Grid item xs={3} key={key}><SkillBox key={key} skill={skill}/></Grid>
     })
 
     return (

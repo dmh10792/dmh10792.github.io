@@ -1,27 +1,29 @@
-import {Button, Container, Divider, Typography} from "@mui/material";
-import {Link} from "react-router-dom";
+import {Box, Button, Divider, Stack, Typography} from "@mui/material";
+import ContactForm from "../components/ContactForm.tsx";
 
 const Contact = () => {
 
     return (
-        <Container
+        <Box
             sx={{
                 display: 'flex',
                 flexDirection: 'row',
                 textAlign: 'start',
-                bgcolor: 'rgba(207,207,207,0.56)',
-                mt: '5vh',
+                bgcolor: '#CFCFCF',
+                mt: '3vh',
+                boxShadow: '5px 3px 5px black',
                 borderRadius: '2%',
-                width: '80vw',
+                width: '79vw',
                 height: '93vh',
                 ml: '3vw'
             }}
         >
-            <Container
+            <Stack
+                spacing={10}
                 sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    mt: '10%'
+                    flex: 1,
+                    mt: '10%',
+                    marginInline: '1%'
                 }}
             >
                 <Typography
@@ -32,9 +34,6 @@ const Contact = () => {
 
                 <Typography
                     variant={"h4"}
-                    sx={{
-                        mt: '10%'
-                    }}
                 >
                     Either complete the form on the right or click the email button below to use your default mail app.
                 </Typography>
@@ -45,14 +44,12 @@ const Contact = () => {
                     sx={{
                         width: '30%',
                         alignSelf: 'center',
-                        mt: 10,
-                        bgcolor: 'grey'
                     }}
                 >
                     Email
                 </Button>
 
-            </Container>
+            </Stack>
 
             <Divider
                 orientation="vertical"
@@ -60,15 +57,18 @@ const Contact = () => {
                 flexItem
             />
 
-            <Container
+            <Box
                 sx={{
                     display: 'flex',
                     flexDirection: 'column',
+                    flex: 1,
+                    marginInline: '1%',
+                    mt: '2%'
                 }}
             >
-
-            </Container>
-        </Container>
+                <ContactForm/>
+            </Box>
+        </Box>
     )
 }
 
