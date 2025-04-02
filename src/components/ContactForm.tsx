@@ -1,5 +1,6 @@
 import {Button, FormControl, Stack, TextField} from "@mui/material";
 import {useState} from "react";
+import emailjs from '@emailjs/browser';
 
 type userMessage = {
     name: string,
@@ -13,6 +14,24 @@ const ContactForm = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    emailjs.init({
+        publicKey: "s-yi_0uW-yWrNAh1J",
+        // Do not allow headless browsers
+        blockHeadless: true,
+        blockList: {
+            // Block the suspended emails
+            list: [],
+            // The variable contains the email address
+            watchVariable: 'email',
+        },
+        limitRate: {
+            // Set the limit rate for the application
+            id: 'app',
+            // Allow 1 request per 10s
+            throttle: 10000,
+        },
+    });
+
     const handleSubmit = () => {
         //capture message values
         const messageToSend: userMessage = {
@@ -22,7 +41,11 @@ const ContactForm = () => {
         }
 
         //send the message
-        console.log(messageToSend)//will be expanded later
+        emailjs.send( "service_80kelvm", "template_fk4hcgb", messageToSend )
+            .then((response) => {
+                console.log('Message sent');
+                console.log(response);
+            })
 
         //clear the form
         clearForm();
