@@ -15,3 +15,9 @@ export type SkillType = {
     name: string,
     imageURL: string,
 }
+
+export type ProjectType = {
+    title: string,
+    description: string,
+    imageURL: string,
+}

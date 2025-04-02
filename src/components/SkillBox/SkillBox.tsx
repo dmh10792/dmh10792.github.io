@@ -37,6 +37,7 @@ const SkillBox = ({skill} :props) => {
             >
                 <img 
                     src={skill.imageURL}
+                    alt='skill image'
                     style={{
                         height: '50%',
                         width: '60%',
