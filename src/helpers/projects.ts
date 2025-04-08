@@ -1,6 +1,17 @@
 import {ProjectType} from "../types.ts";
+import fs from 'fs';
 
 const commonPath :string = '/src/assets/images/projects';
+
+
+
+const getImageNames = (projectName: string) :string[]=> {
+    // fs.readdirSync(`${commonPath}/${projectName}/`).forEach((file) => {
+    //     console.log(file);
+    // })
+
+    return []
+}
 
 export const projects: ProjectType[] = [
     {
@@ -10,5 +21,6 @@ export const projects: ProjectType[] = [
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat " +
             "non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         imageURL: `${commonPath}/airborneready/1abrSplashPage.png`,
+        images: getImageNames('airborneready')
     },
 ]

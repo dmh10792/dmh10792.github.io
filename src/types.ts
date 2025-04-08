@@ -20,4 +20,5 @@ export type ProjectType = {
     title: string,
     description: string,
     imageURL: string,
+    images: string[],
 }
