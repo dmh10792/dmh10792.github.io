@@ -1,6 +1,6 @@
 //Utilities
-import { ReactElement, useEffect } from 'react';
-import { CCarousel, CCarouselItem, CImage } from '@coreui/react';
+import { useEffect } from 'react';
+import Carousel from 'react-material-ui-carousel';
 
 //Components
 import { Container, Row } from "react-bootstrap";
@@ -22,9 +22,14 @@ const Home = () => {
 
         urls.forEach((url) => {
             images.push(
-                <CCarouselItem className="slideshow-item">
-                    <CImage className="slideshow-image" src={url} alt='slideshow image'/>
-                </CCarouselItem>
+                    <img 
+                        className="slideshow-image" 
+                        src={url} 
+                        alt='slideshow image'
+                        style={{
+                            width: '100%',
+                        }}
+                    />
             )
         })
     }, []);
@@ -41,9 +46,9 @@ const Home = () => {
             <Row className="home-body">
                 
                 <Container className='slideshow col-lg-6'>
-                    <CCarousel interval={3000}>
+                    <Carousel interval={3000}>
                         {images}
-                    </CCarousel>
+                    </Carousel>
                 </Container>
                 
 
