@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material"
 import { JobExperience } from "../types"
 import { Dispatch, SetStateAction } from "react"
 import Modal from '@mui/material/Modal';
+import {borderRadiusOuter} from "../AppHelper.ts";
 
 type ModalProps = {
     open: boolean,
@@ -31,7 +32,7 @@ const ExperienceModal = ({open, experience, setOpen}: ModalProps) => {
                     outline: 0,
                     boxShadow: 24,
                     p: 4,
-                    borderRadius: '2%/5%'
+                    borderRadius: `${borderRadiusOuter}`
                 }}
             >
                 <Typography variant={"h4"}> {experience.title} </Typography>

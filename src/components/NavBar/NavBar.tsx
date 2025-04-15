@@ -1,5 +1,5 @@
 //Utilities
-import { NavLink } from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import { useEffect, useState } from "react";
 
 //Components
@@ -9,7 +9,7 @@ import GithubLink from "../Links/GithubLink/GithubLink";
 import TwitterLink from "../Links/TwitterLink/TwitterLink";
 import ResumeLink from "../Links/ResumeLink/ResumeLink";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faUser, faScrewdriverWrench, faBriefcase, faDiagramProject, faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faScrewdriverWrench, faBriefcase, faDiagramProject, faBars, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { Tooltip } from 'react-tooltip';
 import { Button, Drawer} from '@mui/material';
 
@@ -19,6 +19,8 @@ import './NavBar.css'
 
 const NavBar = () => {
 
+
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
     const [_width, setWidth] = useState(window.innerWidth);
     const [drawerVariant, setVariant] = useState<'permanent' | 'persistent' | 'temporary'>('permanent');
     const [open, setOpen] = useState(false);
@@ -60,46 +62,49 @@ const NavBar = () => {
                 <FontAwesomeIcon icon={faBars} className="menu-button" size="3x" />
             </Button>
 
-            <Drawer 
-                open={open} 
+            <Drawer
+                open={open}
                 onClose={toggleDrawer(false)}
                 className="navBar-drawer"
                 variant={drawerVariant}
                 BackdropProps={{ invisible: true }}
             >
-                <div className="navbar-image-container">
-                    <Image className="profile-image" src="src/assets/images/ProfileImage.jpg" roundedCircle />
+
+                <div className="navbar-image-container" onClick={handleNav}>
+                    <Link to={'/'} onClick={handleNav}>
+                        <Image className="profile-image" src="src/assets/images/ProfileImage.jpg" roundedCircle />
+                    </Link>
                 </div>
-                
+
+                <Tooltip anchorSelect=".profile-image" place="bottom">
+                    Home Page
+                </Tooltip>
+
                 <div className="navbar-link-container">
-                    <NavLink to={'/'} onClick={handleNav} className={({isActive, isPending}) => 
-                        isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
-                        <FontAwesomeIcon icon={faHouse} className="navBar-icon"/>
-                        Home
-                    </NavLink>
-                    <NavLink to={'/about'} onClick={handleNav} className={({isActive, isPending}) => 
-                        isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
-                        <FontAwesomeIcon icon={faUser} className="navBar-icon"/>
-                        About
-                    </NavLink>
-                    <NavLink to={'/skills'} onClick={handleNav} className={({isActive, isPending}) => 
-                        isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
-                        <FontAwesomeIcon icon={faScrewdriverWrench} className="navBar-icon"/>
-                        Skills
-                    </NavLink>
-                    <NavLink to={'/experience'} onClick={handleNav} 
-                        className={({isActive, isPending}) => 
-                            isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} 
+
+                    <NavLink to={'/experience'} onClick={handleNav}
+                        className={({isActive, isPending}) =>
+                            isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"}
                     >
                         <FontAwesomeIcon icon={faBriefcase} className="navBar-icon"/>
                         Experience
                     </NavLink>
-                    <NavLink to={'/projects'} onClick={handleNav} className={({isActive, isPending}) => 
+                    <NavLink to={'/skills'} onClick={handleNav} className={({isActive, isPending}) =>
+                        isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
+                        <FontAwesomeIcon icon={faScrewdriverWrench} className="navBar-icon"/>
+                        Skills
+                    </NavLink>
+                    <NavLink to={'/projects'} onClick={handleNav} className={({isActive, isPending}) =>
                         isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
                         <FontAwesomeIcon icon={faDiagramProject} className="navBar-icon"/>
                         Projects
                     </NavLink>
-                    <NavLink to={'/contact'} onClick={handleNav} className={({isActive, isPending}) => 
+                    <NavLink to={'/about'} onClick={handleNav} className={({isActive, isPending}) =>
+                        isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
+                        <FontAwesomeIcon icon={faUser} className="navBar-icon"/>
+                        About
+                    </NavLink>
+                    <NavLink to={'/contact'} onClick={handleNav} className={({isActive, isPending}) =>
                         isPending ? "pending navBar-link" : isActive ? "active navBar-link" : "navBar-link"} >
                         <FontAwesomeIcon icon={faEnvelope} className="navBar-icon"/>
                         Contact Me

@@ -1,41 +1,46 @@
-import { Card, CardContent } from "@mui/material";
-import { SkillType } from "../../types";
+import {Card, CardContent} from "@mui/material";
+import {SkillType} from "../../types";
 
 type props = {
     skill: SkillType,
 }
 
-const SkillBox = ({skill} :props) => {
+const SkillBox = ({skill}: props) => {
 
-    let fontSize :string;
+    let fontSize: string;
 
-    if(skill.name.length >= 30) {
+    if (skill.name.length >= 30) {
+        fontSize = '8px';
+    } else if (skill.name.length >= 20) {
+        fontSize = '12px';
+    } else {
         fontSize = '16px';
-    } else if(skill.name.length >= 20) {
-        fontSize = '18px';
-    }else {
-        fontSize = '20px';
     }
 
     return (
-        <Card 
+        <Card
             sx={{
-                borderRadius: '5%',
+                borderRadius: '0.50%/1.50%', //different because of the size
                 margin: '2%',
+                display: '',
                 boxShadow: '5px 3px 5px black',
-                maxWidth: '90%',
-                minHeight: '100%',
+                maxWidth: '40%',
+                height: '80%',
+                maxHeight: '80%'
             }}
 
         >
             <CardContent
                 sx={{
-                    justifyItems: 'center',
-                    alignContent: 'center',
-                    textAlign: 'center'
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    textAlign: 'center',
+                    gap: 1
                 }}
             >
-                <img 
+                <img
                     src={skill.imageURL}
                     alt='skill image'
                     style={{

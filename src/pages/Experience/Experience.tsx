@@ -12,6 +12,7 @@ import 'react-vertical-timeline-component/style.min.css';
 import './Experience.css';
 import ExperienceModal from '../../components/ExperienceModal';
 import { useState } from 'react';
+import {borderRadiusInner, borderRadiusOuter} from "../../AppHelper.ts";
 
 
 const Experience = () => {
@@ -33,8 +34,11 @@ const Experience = () => {
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 icon={<FontAwesomeIcon icon={experience.icon} className="experience-icon"/>}
                 onTimelineElementClick={()=>handleClick(experience)}
+                style={{
+                    borderRadius: `${borderRadiusOuter}`,
+                }}
             >
-                <img className='experience-image'  src={experience.picture}/>
+                <img className='experience-image' alt='experience image' src={experience.picture} style={{ borderRadius: `${borderRadiusInner}`}}/>
                 <h3 className="experience-title">{experience.title}</h3>
                 <h5 className="experience-company">{experience.company}</h5>
                 <p className='experience-description'>
