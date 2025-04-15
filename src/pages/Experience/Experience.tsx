@@ -10,13 +10,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 //CSS
 import 'react-vertical-timeline-component/style.min.css';
 import './Experience.css';
+import ExperienceModal from '../../components/ExperienceModal';
+import { useState } from 'react';
 
 
 const Experience = () => {
 
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedExperience, setSelectedExperience] = useState<JobExperience>(experiences[0]);
+
     const history :React.ReactElement[]= experiences.map((experience, key) => {
 
         const dateRange :string = `${experience.startDate} - ${experience.endDate}`
+
         return (
             <VerticalTimelineElement
                 key={key}
@@ -34,28 +40,27 @@ const Experience = () => {
                 <p className='experience-description'>
                     {experience.description}
                 </p>
-                {/* <ul className='experience-accomplishmentList'>
-                    {experience.accomplishments.map((item) => {
-                        return <li className='experience-accomplishment'>{item}</li>
-                    })}
-                </ul> */}
             </VerticalTimelineElement>
         )
     })
 
     const handleClick = (experience: JobExperience) => {
-        console.log(experience.title);
-        //This is where I will put the logic for opening the modal
+        setSelectedExperience(experience)
+        setIsModalOpen(true);
     }
 
     return (
-        <div className='experience-container'>
-            <div className='timeline-container'>
-                <VerticalTimeline>
-                    {history}
-                </VerticalTimeline>
+        <>
+            <div className='experience-container'>
+                <div className='timeline-container'>
+                    <VerticalTimeline>
+                        {history}
+                    </VerticalTimeline>
+                </div>
             </div>
-        </div>
+
+            <ExperienceModal open={isModalOpen} experience={selectedExperience} setOpen={setIsModalOpen}/>
+        </>
     )
 }
 

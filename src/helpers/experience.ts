@@ -85,8 +85,8 @@ export const experiences : JobExperience[] = [
     {
         title: 'Standardization Instructor Operator',
         company: '173rd Airborne Brigade Combat Team, U.S. Army',
-        startDate: 'June 2018',
-        endDate: 'June 2022',
+        startDate: 'June 2015',
+        endDate: 'June 2018',
         description: `Analyzed and improved the organization's Standard Operating Procedures (SOP) to the
             Army's Department of Education and Standardization (DES) standards. Ensured all applicable
             Technical Manuals, Army Regulations, Department of Defense Publications, and Federal
@@ -118,7 +118,7 @@ export const experiences : JobExperience[] = [
                 destinations throughout Europe. Ensuring each transport complied with the
                 destination country's hazardous materials regulations.`
         ],
-        picture: `${commonPath}/173rd/173rd.jpg`,
+        picture: `${commonPath}/173rd/173hq.jpeg`,
         icon: faEarthEurope
     },
     {
