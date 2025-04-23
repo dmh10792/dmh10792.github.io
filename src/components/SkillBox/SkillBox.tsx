@@ -1,5 +1,6 @@
-import {Card, CardContent} from "@mui/material";
+import {Card, CardContent, Typography} from "@mui/material";
 import {SkillType} from "../../types";
+import {borderRadiusInner} from "../../AppHelper.ts";
 
 type props = {
     skill: SkillType,
@@ -10,9 +11,9 @@ const SkillBox = ({skill}: props) => {
     let fontSize: string;
 
     if (skill.name.length >= 30) {
-        fontSize = '8px';
+        fontSize = '7px';
     } else if (skill.name.length >= 20) {
-        fontSize = '12px';
+        fontSize = '14px';
     } else {
         fontSize = '16px';
     }
@@ -20,15 +21,13 @@ const SkillBox = ({skill}: props) => {
     return (
         <Card
             sx={{
-                borderRadius: '0.50%/1.50%', //different because of the size
+                borderRadius: borderRadiusInner, //different because of the size
                 margin: '2%',
-                display: '',
+                display: 'inline-block',
                 boxShadow: '5px 3px 5px black',
-                maxWidth: '40%',
-                height: '80%',
-                maxHeight: '80%'
+                width: '25%',
+                height: '20%',
             }}
-
         >
             <CardContent
                 sx={{
@@ -37,26 +36,26 @@ const SkillBox = ({skill}: props) => {
                     justifyContent: 'center',
                     alignItems: 'center',
                     textAlign: 'center',
-                    gap: 1
                 }}
             >
                 <img
                     src={skill.imageURL}
                     alt='skill image'
                     style={{
+                        flex: 1,
                         height: '50%',
                         width: '60%',
                         marginBottom: '10%',
                     }}
                 />
-                <h3
-                    style={{
-                        fontWeight: '500',
-                        fontSize: `${fontSize}`,
-                    }}
+                <Typography
+                    flex={1}
+                    fontSize={fontSize}
+                    fontWeight={'500'}
+                    fontFamily={'sans-serif'}
                 >
                     {skill.name}
-                </h3>
+                </Typography>
             </CardContent>
         </Card>
     )

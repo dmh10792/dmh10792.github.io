@@ -13,6 +13,7 @@ import './Experience.css';
 import ExperienceModal from '../../components/ExperienceModal';
 import { useState } from 'react';
 import {borderRadiusInner, borderRadiusOuter} from "../../AppHelper.ts";
+import {Button, Typography} from "@mui/material";
 
 
 const Experience = () => {
@@ -39,7 +40,16 @@ const Experience = () => {
                 }}
             >
                 <img className='experience-image' alt='experience image' src={experience.picture} style={{ borderRadius: `${borderRadiusInner}`}}/>
-                <h3 className="experience-title">{experience.title}</h3>
+                <Typography variant={'h5'} sx={{display: 'block'}}>
+                    {experience.title}
+                    <Button
+                        variant={'contained'}
+                        sx={{justifySelf: 'end'}}
+                        onClick={() => setIsModalOpen(true)}
+                    >
+                        Details
+                    </Button>
+                </Typography>
                 <h5 className="experience-company">{experience.company}</h5>
                 <p className='experience-description'>
                     {experience.description}

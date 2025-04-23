@@ -2,6 +2,7 @@
     display: flex;
     height: 99%;
     margin-top: 1%;
+    font-family: sans-serif;
     /* border: red 2px solid; */
 }
 
@@ -70,6 +71,6 @@
 
 .text-header {
     font-weight: 900;
-    font-family:'Times New Roman', Times, serif;
+    font-family: sans-serif;
     font-size: 2em;
 }

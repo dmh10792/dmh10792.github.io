@@ -12,21 +12,19 @@ const Skills = () => {
     return (
             <div style={{
                 display: 'flex',
-                flexDirection: 'row',
                 maxHeight: '97%',
                 marginTop: '2%',
-                overflowY: 'auto',
-                overflowX: 'hidden',
+                overflow: 'auto',
                 msOverflowStyle: 'none',
                 scrollbarWidth: 'none',
                 marginLeft: '3%',
             }}>
                 <div
                     style={{
-                        display: 'grid',
-                        gridTemplateColumns: 'repeat(3, 1fr)',
-                        gap: 0.25,
                         flex: 1,
+                        overflowY: 'auto',
+                        msOverflowStyle: 'none',
+                        scrollbarWidth: 'none',
                     }}
                 >
                     {skillComponents}
@@ -35,9 +33,14 @@ const Skills = () => {
                 <div
                     style={{
                         flex: 1,
+                        display: 'flex',
                     }}
                 >
-                    <Typography>
+                    <Typography
+                        variant={'body1'}
+                        fontFamily={'sans-serif'}
+                        fontSize={'xx-large'}
+                    >
                         A short paragraph of text that explains how I am committed to continued learning.
                         azlsljksdjlkcnskjdcns. skdjcnskjdncskjdncsd. sdkjcnskjdncksjdcksjdnc
                     </Typography>

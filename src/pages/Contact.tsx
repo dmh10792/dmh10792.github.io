@@ -15,7 +15,8 @@ const Contact = () => {
                 borderRadius: '2%',
                 width: '79vw',
                 height: '93vh',
-                ml: '3vw'
+                ml: '3vw',
+                fontFamily: 'sans-serif',
             }}
         >
             <Stack
