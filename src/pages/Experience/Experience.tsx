@@ -13,7 +13,7 @@ import './Experience.css';
 import ExperienceModal from '../../components/ExperienceModal';
 import { useState } from 'react';
 import {borderRadiusInner, borderRadiusOuter} from "../../AppHelper.ts";
-import {Button, Typography} from "@mui/material";
+import {Button, Stack, Typography} from "@mui/material";
 
 
 const Experience = () => {
@@ -39,21 +39,25 @@ const Experience = () => {
                     borderRadius: `${borderRadiusOuter}`,
                 }}
             >
-                <img className='experience-image' alt='experience image' src={experience.picture} style={{ borderRadius: `${borderRadiusInner}`}}/>
-                <Typography variant={'h5'} sx={{display: 'block'}}>
-                    {experience.title}
-                    <Button
-                        variant={'contained'}
-                        sx={{justifySelf: 'end'}}
-                        onClick={() => setIsModalOpen(true)}
-                    >
-                        Details
-                    </Button>
-                </Typography>
-                <h5 className="experience-company">{experience.company}</h5>
-                <p className='experience-description'>
-                    {experience.description}
-                </p>
+                <Stack spacing={1}>
+                    <img className='experience-image' alt='experience image' src={experience.picture} style={{ borderRadius: `${borderRadiusInner}`}}/>
+
+                    <Typography variant={'h5'}>
+                        {experience.title}
+                    </Typography>
+
+                    <h5 className="experience-company">{experience.company}</h5>
+                    <p className='experience-description'>
+                        {experience.description}
+                    </p>
+                        <Button
+                            variant={'contained'}
+                            sx={{width: 'fit-content'}}
+                            onClick={() => setIsModalOpen(true)}
+                        >
+                            Details
+                        </Button>
+                </Stack>
             </VerticalTimelineElement>
         )
     })

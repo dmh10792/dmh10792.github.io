@@ -12,7 +12,7 @@ const Contact = () => {
                 bgcolor: '#CFCFCF',
                 mt: '3vh',
                 boxShadow: '5px 3px 5px black',
-                borderRadius: '2%',
+                borderRadius: '0.8%/1.5%',
                 width: '79vw',
                 height: '93vh',
                 ml: '3vw',

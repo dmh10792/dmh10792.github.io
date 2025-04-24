@@ -19,6 +19,7 @@ const Projects = () => {
                 overflowY: 'scroll',
                 msOverflowStyle: 'none',
                 scrollbarWidth: 'none',
+                fontFamily: 'sans-serif',
             }}
         >
             {projectCards}

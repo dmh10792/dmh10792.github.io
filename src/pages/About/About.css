@@ -20,6 +20,7 @@
     width: 50%;
     height: 100%;
     color: white;
+    align-content: center;
     /* border: yellow 2px solid; */
 }
 
@@ -52,11 +53,6 @@
     width: 30%;
     margin: 1%;
     box-shadow: 2px 2px 5px black;
-}
-
-.text-section .about {
-    margin-top: 30%;
-    
 }
 
 .text-section p {
