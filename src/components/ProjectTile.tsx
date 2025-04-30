@@ -28,7 +28,7 @@ const ProjectTile = ({project, position}: props) => {
             />
             )
         })
-    }, []);
+    });
 
     return (
         <Card sx={{
@@ -54,7 +54,7 @@ const ProjectTile = ({project, position}: props) => {
             >
                 {images}
             </Carousel>
-            <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', fontFamily: 'sans-serif' }}>
                 <CardContent sx={{ flex: '1 0 auto' }}>
                     <Typography component="div" variant="h5">
                         {project.title}
@@ -64,12 +64,12 @@ const ProjectTile = ({project, position}: props) => {
                         component="div"
                         sx={{ 
                             color: 'text.secondary', 
-                            mt: 1, 
-                            ontSize: "1em", 
+                            mt: 1,
+                            fontSize: "0.9em",
                             height: '80%' ,
                             overflowY: 'scroll',
                             scrollbarWidth: 'none',
-                            msOverflowStyle: 'none', 
+                            msOverflowStyle: 'none',
                         }}
                     >
                         {project.description}

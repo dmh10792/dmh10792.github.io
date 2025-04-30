@@ -40,6 +40,7 @@ const Skills = () => {
                         variant={'body1'}
                         fontFamily={'sans-serif'}
                         fontSize={'xx-large'}
+                        color={'white'}
                     >
                         A short paragraph of text that explains how I am committed to continued learning.
                         azlsljksdjlkcnskjdcns. skdjcnskjdncskjdncsd. sdkjcnskjdncksjdcksjdnc

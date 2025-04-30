@@ -27,6 +27,7 @@ const SkillBox = ({skill}: props) => {
                 boxShadow: '5px 3px 5px black',
                 width: '25%',
                 height: '20%',
+                bgcolor: '#ffffff',
             }}
         >
             <CardContent

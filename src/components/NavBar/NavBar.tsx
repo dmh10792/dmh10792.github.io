@@ -52,10 +52,6 @@ const NavBar = () => {
         }
     }
 
-    /**
-     * On clicking the background the drawer still closes.
-     */
-
     return (
         <div className="navBar-body">
             <Button onClick={toggleDrawer(true)}>

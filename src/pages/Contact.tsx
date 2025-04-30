@@ -1,5 +1,6 @@
 import {Box, Button, Divider, Stack, Typography} from "@mui/material";
 import ContactForm from "../components/ContactForm.tsx";
+import {borderRadiusInner} from "../AppHelper.ts";
 
 const Contact = () => {
 
@@ -9,10 +10,10 @@ const Contact = () => {
                 display: 'flex',
                 flexDirection: 'row',
                 textAlign: 'start',
-                bgcolor: '#CFCFCF',
+                bgcolor: '#ffffff',
                 mt: '3vh',
                 boxShadow: '5px 3px 5px black',
-                borderRadius: '0.8%/1.5%',
+                borderRadius: {borderRadiusInner},//'0.8%/1.5%',
                 width: '79vw',
                 height: '93vh',
                 ml: '3vw',

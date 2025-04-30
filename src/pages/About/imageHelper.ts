@@ -13,10 +13,6 @@ export const imageArray :aboutImage[]= [
         imagePath: '/src/assets/about-images/images/Ball2023.jpg'
     },
     {
-        thumbNailURL: '/src/assets/about-images/thumbnails/BraggPLTSquared.JPG',
-        imagePath: '/src/assets/about-images/images/BraggPLT.JPG'
-    },
-    {
         thumbNailURL: '/src/assets/about-images/thumbnails/FishingSquared.JPG',
         imagePath: '/src/assets/about-images/images/Fishing.JPG'
     },
