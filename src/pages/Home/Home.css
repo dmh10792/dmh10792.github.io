@@ -2,18 +2,20 @@
     text-align: center;
     color: white;
     padding-top: 10%;
+    font-family: sans-serif;
 }
 
 h1 {
     font-weight: bold;
+    font-family: sans-serif;
 }
 
 h3 {
-    font-family:'Courier New', Courier, monospace
+    font-family:'sans-serif', Courier, monospace;
 }
 
 h6 {
-    font-family:'Courier New', Courier, monospace;
+    font-family:'sans-serif', Courier, monospace;
     font-size: small;
 }
 

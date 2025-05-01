@@ -15,7 +15,7 @@ const Home = () => {
     const images :React.ReactElement[] = [];
 
     useEffect(() => {
-        let urls  :string[]= [];
+        const urls  :string[]= [];
         for(let i = 1; i <= 5; i++) {
             urls.push(`src/assets/images/slideshow/slide${i}.jpg`)
         }
