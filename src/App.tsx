@@ -11,17 +11,14 @@ import Skills from './pages/Skills';
 import Experience from './pages/Experience/Experience';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import {Box} from "@mui/material";
 
-
-//CSS
-import './App.css'
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   
 
   return (
-    <div className='row app-container'>
+    <Box>
       <BrowserRouter>
         <div className='col-lg-2 '>
           <NavBar/>
@@ -37,9 +34,8 @@ function App() {
             <Route path='/contact' element={<Contact/>}/>
           </Routes>
         </div>
-
       </BrowserRouter>
-    </div>
+    </Box>
   )
 }
 
