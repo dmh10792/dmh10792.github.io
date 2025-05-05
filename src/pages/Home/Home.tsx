@@ -3,10 +3,10 @@ import { useEffect } from 'react';
 import Carousel from 'react-material-ui-carousel';
 
 //Components
-import { Container, Row } from "react-bootstrap";
 
 //CSS
 import './Home.css';
+import {Container, Stack} from "@mui/material";
 
 
 
@@ -43,7 +43,7 @@ const Home = () => {
                 <h6>Based in Austin Texas</h6>
             </Container>
 
-            <Row className="home-body">
+            <Stack direction='row' className="home-body">
                 
                 <Container className='slideshow col-lg-6'>
                     <Carousel interval={3000}>
@@ -64,7 +64,7 @@ const Home = () => {
                     </p>
                 </Container>
 
-            </Row>
+            </Stack>
              
         </Container>
     ) 
