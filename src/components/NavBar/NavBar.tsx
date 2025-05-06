@@ -10,13 +10,21 @@ import LinkedInLink from "../Links/LinkedinLink/LinkedinLink.tsx";
 import GithubLink from "../Links/GithubLink/GithubLink.tsx";
 import ResumeLink from "../Links/ResumeLink/ResumeLink.tsx";
 import TwitterLink from "../Links/TwitterLink/TwitterLink.tsx";
+import {Colors} from "../../AppHelper.ts";
 
 
 const NavBar = () => {
     const pages = ['Experience', 'Skills', 'Projects', 'Contact'];
 
     return (
-        <AppBar position="sticky" sx={{bgcolor: 'black', width: '100%'}}>
+        <AppBar
+            position="sticky"
+            sx={{
+                bgcolor: 'black',
+                width: '100%',
+                borderBottom: ''
+            }}
+        >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Tooltip title="Back to the top">
@@ -28,12 +36,12 @@ const NavBar = () => {
                         </Typography>
                     </Tooltip>
 
-                    <Box ml={2}>
+                    <Stack direction={'row'} ml={2}>
                         <LinkedInLink/>
                         <GithubLink/>
                         <TwitterLink/>
                         <ResumeLink/>
-                    </Box>
+                    </Stack>
 
                     <Box
                         sx={{
@@ -51,7 +59,8 @@ const NavBar = () => {
                                         color: 'white',
                                         display: 'block',
                                         fontFamily: 'sans-serif',
-                                        fontSize: 'large'
+                                        fontSize: 'large',
+                                        ':hover': {backgroundColor: Colors.grey.primary },
                                     }}
                                 >
                                     {page}
