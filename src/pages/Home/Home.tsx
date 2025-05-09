@@ -1,7 +1,6 @@
 import {ReactElement, useEffect} from 'react';
 import {Box, Container, Stack, Typography} from "@mui/material";
 import ReactTypingEffect from 'react-typing-effect';
-import {Colors} from "../../AppHelper.ts";
 
 
 
@@ -30,22 +29,27 @@ const Home = () => {
         })
     });
 
+
     return (
         <Box mt={3}>
 
             <Stack
-                ml={30}
+                ml={20}
             >
 
                 <ReactTypingEffect
                     text={titles}
                     cursorRenderer={(cursor: string | number ) => <Typography variant={'h2'} color='white'>{cursor}</Typography>}
+                    speed={100}
+                    eraseDelay={2500}
+                    typingDelay={1000}
                     displayTextRenderer={(text: string) => {
                         return (
                             <Typography
                                 variant={'h2'}
                                 color={'white'}
                                 fontFamily={'sans-serif'}
+                                fontStyle={'italic'}
                             >
                                 {text}
                             </Typography>
@@ -67,6 +71,7 @@ const Home = () => {
                     fontFamily={'sans-serif'}
                     fontWeight={'lighter'}
                     fontSize={'small'}
+                    ml={1}
                 >
                     Based in Austin Texas
                 </Typography>
@@ -82,7 +87,7 @@ const Home = () => {
                         I also have experience as a college professor/senior instructor.
                         <br/>
                         <br/>
-                        Feel free to contact me for any questions you may have. 
+                        Feel free to contact me for any questions you may have.
                     </p>
                 </Container>
 

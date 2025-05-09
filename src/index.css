@@ -3,9 +3,7 @@ html {
 }
 
 body {
-  background-image: linear-gradient(#000000, #000000D1);
-  background-size: cover;
-  background-repeat: no-repeat;
+  background: linear-gradient(#000000, #000000D1) fixed;
   height: 100%;
   margin: 0;
 }
