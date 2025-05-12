@@ -1,37 +1,14 @@
-import {ReactElement, useEffect} from 'react';
-import {Box, Container, Stack, Typography} from "@mui/material";
+import {Box, Stack, Typography} from "@mui/material";
 import ReactTypingEffect from 'react-typing-effect';
 
 
 
 const Home = () => {
 
-    const images: ReactElement[] = [];
     const titles = ["Developer", "Professor", "Veteran"];
 
-    useEffect(() => {
-        const urls: string[] = [];
-        for (let i = 1; i <= 5; i++) {
-            urls.push(`src/assets/images/slideshow/slide${i}.jpg`)
-        }
-
-        urls.forEach((url) => {
-            images.push(
-                <img
-                    className="slideshow-image"
-                    src={url}
-                    alt='slideshow'
-                    style={{
-                        width: '100%',
-                    }}
-                />
-            )
-        })
-    });
-
-
     return (
-        <Box mt={3}>
+        <Box mt={5} mb={10}>
 
             <Stack
                 ml={20}
@@ -39,6 +16,7 @@ const Home = () => {
 
                 <ReactTypingEffect
                     text={titles}
+                    // @ts-expect-error es-lint doesn't detect the following prop, but it is necessary to render the cursor
                     cursorRenderer={(cursor: string | number ) => <Typography variant={'h2'} color='white'>{cursor}</Typography>}
                     speed={100}
                     eraseDelay={2500}
@@ -77,22 +55,22 @@ const Home = () => {
                 </Typography>
             </Stack>
 
-            <Stack direction='row' className="home-body">
+            {/*<Stack direction='row' className="home-body">*/}
 
-                <Container className='col-lg-6'>
-                    <p className='home-text'>
-                        I develop applications for client's needs using modern technologies and frameworks.
-                        <br/>
-                        <br/>
-                        I also have experience as a college professor/senior instructor.
-                        <br/>
-                        <br/>
-                        Feel free to contact me for any questions you may have.
-                    </p>
-                </Container>
+            {/*    <Container className='col-lg-6'>*/}
+            {/*        <p className='home-text'>*/}
+            {/*            I develop applications for client's needs using modern technologies and frameworks.*/}
+            {/*            <br/>*/}
+            {/*            <br/>*/}
+            {/*            I also have experience as a college professor/senior instructor.*/}
+            {/*            <br/>*/}
+            {/*            <br/>*/}
+            {/*            Feel free to contact me for any questions you may have.*/}
+            {/*        </p>*/}
+            {/*    </Container>*/}
 
-            </Stack>
-             
+            {/*</Stack>*/}
+            {/* */}
         </Box>
     ) 
 }
