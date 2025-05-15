@@ -1,19 +1,16 @@
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
+
 import Typography from '@mui/material/Typography';
 import {ProjectType} from "../types.ts";
-import {Box} from "@mui/material";
+import {Box, Stack} from "@mui/material";
 import { useEffect } from 'react';
 import Carousel from 'react-material-ui-carousel';
 
 type props = {
     project: ProjectType,
-    position: number,
 }
 
-const ProjectTile = ({project, position}: props) => {
+const ProjectTile = ({project}: props) => {
 
-    const leftMargin = ((position + 1) % 2 === 0) ? '15%': "0%";
     const images :React.ReactElement[] = [];
 
     useEffect(() => {
@@ -31,52 +28,55 @@ const ProjectTile = ({project, position}: props) => {
     });
 
     return (
-        <Card sx={{
-                display: 'flex',
-                width: '85%',
-                height: '27%',
-                mb: 7,
-                marginLeft: `${leftMargin}`,
+        <Stack
+            direction={"row"}
+            sx={{
+                marginX: '10%',
+                height: '20%'
             }}
         >
           
             <Carousel
                 navButtonsWrapperProps={{
                     style: {
-                        position: 'unset',
+                        
                     }
                 }}
                 sx={{
                     width: '50%',
                     height: '100%',
                     flex: '1 0 auto',
+                    marginRight: '5%'
                 }}
             >
                 {images}
             </Carousel>
-            <Box sx={{ display: 'flex', flexDirection: 'column', fontFamily: 'sans-serif' }}>
-                <CardContent sx={{ flex: '1 0 auto' }}>
-                    <Typography component="div" variant="h5">
+            <Box sx={{ 
+                display: 'flex', 
+                flexDirection: 'column', 
+                fontFamily: 'sans-serif',
+                marginTop: '4%'
+                }}>
+                    <Typography
+                        variant={'h4'}
+                        color={'white'}
+                        fontFamily={'sans-serif'}
+                        fontStyle={'italic'}
+                        mb={2}
+                    >
                         {project.title}
                     </Typography>
                     <Typography
-                        variant="body2"
-                        component="div"
-                        sx={{ 
-                            color: 'text.secondary', 
-                            mt: 1,
-                            fontSize: "0.9em",
-                            height: '80%' ,
-                            overflowY: 'scroll',
-                            scrollbarWidth: 'none',
-                            msOverflowStyle: 'none',
-                        }}
+                        variant={'h5'}
+                        color={'white'}
+                        fontFamily={'sans-serif'}
+                        fontSize={'large'}
+                        ml={1}
                     >
                         {project.description}
                     </Typography>
-                </CardContent>
             </Box>
-        </Card>
+        </Stack>
     );
 };
 
