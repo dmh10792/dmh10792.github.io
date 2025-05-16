@@ -1,4 +1,4 @@
-import {Box, Button, Stack, Typography} from "@mui/material";
+import {Box, IconButton, Stack, Typography} from "@mui/material";
 import ProjectTile from "../components/ProjectTile.tsx";
 import {projects} from "../helpers/projects.ts";
 import { useState } from 'react';
@@ -57,9 +57,25 @@ const Projects = () => {
             </Typography>
 
             <Stack direction={"row"}>
-                <Button onClick={moveSelectionLeft} >Left</Button>
+                <IconButton onClick={moveSelectionLeft} >
+                    <img 
+                        src='/src/assets/icons/icons8-previous-48.png'
+                        alt='Move left icon'
+                        style={{
+                            width: '100%',
+                        }}
+                    />
+                </IconButton>
                 {selectedProject}
-                <Button onClick={moveSelectionRight} >Right</Button>
+                <IconButton onClick={moveSelectionRight} >
+                    <img 
+                        src='/src/assets/icons/icons8-right-button-48.png'
+                        alt='Move right icon'
+                        style={{
+                            width: '100%',
+                        }}
+                    />
+                </IconButton>
             </Stack>
             
         </Box>

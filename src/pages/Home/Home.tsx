@@ -8,7 +8,11 @@ const Home = () => {
     const titles = ["Developer", "Professor", "Veteran"];
 
     return (
-        <Box mt={5} mb={10}>
+        <Box
+            sx={{
+                marginTop: '10%'
+            }}
+        >
 
             <Stack
                 ml={20}

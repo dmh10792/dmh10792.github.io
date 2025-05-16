@@ -32,7 +32,7 @@ const ProjectTile = ({project}: props) => {
             direction={"row"}
             sx={{
                 marginX: '10%',
-                height: '20%'
+                height: '20%',
             }}
         >
           
