@@ -1,4 +1,4 @@
-import {Card, CardContent, Typography} from "@mui/material";
+import {Box, CardContent, Typography} from "@mui/material";
 import {SkillType} from "../../types";
 import {borderRadiusInner} from "../../AppHelper.ts";
 
@@ -8,57 +8,49 @@ type props = {
 
 const SkillBox = ({skill}: props) => {
 
-    let fontSize: string;
+    //let fontSize: string;
 
-    if (skill.name.length >= 30) {
-        fontSize = '7px';
-    } else if (skill.name.length >= 20) {
-        fontSize = '14px';
-    } else {
-        fontSize = '16px';
-    }
+    // if (skill.name.length >= 30) {
+    //     fontSize = '7px';
+    // } else if (skill.name.length >= 20) {
+    //     fontSize = '14px';
+    // } else {
+    //     fontSize = '16px';
+    // }
 
     return (
-        <Card
+        <Box
             sx={{
-                borderRadius: borderRadiusInner, //different because of the size
+                // borderRadius: borderRadiusInner, //different because of the size
                 margin: '2%',
                 display: 'inline-block',
-                boxShadow: '5px 3px 5px black',
-                width: '25%',
-                height: '20%',
-                bgcolor: '#ffffff',
+                // width: '25%',
+                // height: '20%',
+                alignContent: 'center'
             }}
         >
-            <CardContent
-                sx={{
-                    display: 'flex',
-                    flexDirection: 'column',
-                    justifyContent: 'center',
-                    alignItems: 'center',
-                    textAlign: 'center',
-                }}
-            >
                 <img
                     src={skill.imageURL}
                     alt='skill image'
                     style={{
                         flex: 1,
-                        height: '50%',
-                        width: '60%',
-                        marginBottom: '10%',
+                        height: '40%',
+                        width: '30%',
+                        marginBottom: '5%',
+                        alignContent: "center"
                     }}
                 />
                 <Typography
                     flex={1}
-                    fontSize={fontSize}
+                    fontSize={'1em'}
                     fontWeight={'500'}
+                    color="white"
                     fontFamily={'sans-serif'}
+                    align="center"
                 >
                     {skill.name}
                 </Typography>
-            </CardContent>
-        </Card>
+        </Box>
     )
 }
 
