@@ -68,8 +68,18 @@ const Experience = () => {
     }
 
     return (
-        <>
-            <div className='experience-container'>
+        <div>
+            <div className='experience-container text-center'>
+                <Typography
+                    variant={'h2'}
+                    fontFamily={'sans-serif'}
+                    fontWeight={'500'}
+                    color={'white'}
+                    mb={10}
+                    
+                >
+                    Experiences
+                </Typography>
                 <div className='timeline-container'>
                     <VerticalTimeline>
                         {history}
@@ -78,7 +88,7 @@ const Experience = () => {
             </div>
 
             <ExperienceModal open={isModalOpen} experience={selectedExperience} setOpen={setIsModalOpen}/>
-        </>
+        </div>
     )
 }
 

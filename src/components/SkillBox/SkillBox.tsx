@@ -1,6 +1,6 @@
-import {Box, CardContent, Typography} from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import {SkillType} from "../../types";
-import {borderRadiusInner} from "../../AppHelper.ts";
+// import {borderRadiusInner} from "../../AppHelper.ts";
 
 type props = {
     skill: SkillType,
@@ -8,27 +8,8 @@ type props = {
 
 const SkillBox = ({skill}: props) => {
 
-    //let fontSize: string;
-
-    // if (skill.name.length >= 30) {
-    //     fontSize = '7px';
-    // } else if (skill.name.length >= 20) {
-    //     fontSize = '14px';
-    // } else {
-    //     fontSize = '16px';
-    // }
-
     return (
-        <Box
-            sx={{
-                // borderRadius: borderRadiusInner, //different because of the size
-                margin: '2%',
-                display: 'inline-block',
-                // width: '25%',
-                // height: '20%',
-                alignContent: 'center'
-            }}
-        >
+        <Box className="text-center bg-gray-300 min-h-40 mx-10 rounded-lg" >
                 <img
                     src={skill.imageURL}
                     alt='skill image'
