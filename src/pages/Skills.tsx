@@ -10,25 +10,19 @@ const Skills = () => {
     })
 
     return (
-            <div style={{
-                display: 'flex',
-                maxHeight: '97%',
-                marginTop: '2%',
-                overflow: 'auto',
-                msOverflowStyle: 'none',
-                scrollbarWidth: 'none',
-                marginLeft: '3%',
-            }}>
-                <div
-                    style={{
-                        flex: 1,
-                        overflowY: 'auto',
-                        msOverflowStyle: 'none',
-                        scrollbarWidth: 'none',
-                    }}
-                >
-                    {skillComponents}
-                </div>
+            <div 
+                className="p-8"
+                // style={{
+                //     display: 'flex',
+                //     maxHeight: '97%',
+                //     marginTop: '2%',
+                //     overflow: 'auto',
+                //     msOverflowStyle: 'none',
+                //     scrollbarWidth: 'none',
+                //     marginLeft: '3%',
+                // }}
+            >
+                
 
                 <div
                     style={{
@@ -41,10 +35,22 @@ const Skills = () => {
                         fontFamily={'sans-serif'}
                         fontSize={'xx-large'}
                         color={'white'}
+                        className="text-center"
                     >
-                        A short paragraph of text that explains how I am committed to continued learning.
-                        azlsljksdjlkcnskjdcns. skdjcnskjdncskjdncsd. sdkjcnskjdncksjdcksjdnc
+                        As a dedicated industry professional, I am committed to lifelong learning and the continuous development of new expertise. Below is a selection of my key skills and competencies.
                     </Typography>
+                </div>
+
+                <div
+                    className="flex "
+                    // style={{
+                    //     flex: 1,
+                    //     overflowY: 'auto',
+                    //     msOverflowStyle: 'none',
+                    //     scrollbarWidth: 'none',
+                    // }}
+                >
+                    {/* {skillComponents} */}
                 </div>
 
             </div>
