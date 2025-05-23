@@ -40,7 +40,7 @@ const Skills = () => {
                     </Typography>
                 </div>
 
-                <div className="flex ">
+                <div className="flex">
                     <Carousel 
                         responsive={responsive}
                         swipeable={true}
