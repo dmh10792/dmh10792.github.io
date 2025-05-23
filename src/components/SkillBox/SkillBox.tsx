@@ -1,6 +1,5 @@
 import {Box, Typography} from "@mui/material";
 import {SkillType} from "../../types";
-// import {borderRadiusInner} from "../../AppHelper.ts";
 
 type props = {
     skill: SkillType,
@@ -9,28 +8,22 @@ type props = {
 const SkillBox = ({skill}: props) => {
 
     return (
-        <Box className="text-center bg-gray-300 min-h-40 mx-10 rounded-lg" >
-                <img
-                    src={skill.imageURL}
-                    alt='skill image'
-                    style={{
-                        flex: 1,
-                        height: '40%',
-                        width: '30%',
-                        marginBottom: '5%',
-                        alignContent: "center"
-                    }}
-                />
-                <Typography
-                    flex={1}
-                    fontSize={'1em'}
-                    fontWeight={'500'}
-                    color="white"
-                    fontFamily={'sans-serif'}
-                    align="center"
-                >
-                    {skill.name}
-                </Typography>
+        <Box className="flex flex-col items-center min-h-40 mx-10 rounded-lg max-w-48 pt-5" >
+            <img
+                src={skill.imageURL}
+                alt='skill image'
+                className="h-20 w-25 mb-5"
+            />
+            <Typography
+                flex={1}
+                fontSize={'1em'}
+                fontWeight={'500'}
+                fontFamily={'sans-serif'}
+                color="white"
+                align="center"
+            >
+                {skill.name}
+            </Typography>
         </Box>
     )
 }

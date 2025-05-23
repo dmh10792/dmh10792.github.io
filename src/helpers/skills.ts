@@ -37,10 +37,6 @@ export const skills :SkillType[] = [
         imageURL: `${commonPath}/cpp-logo.png`,
     },
     {
-        name: 'C#',
-        imageURL: `${commonPath}/csharp-logo.png`,
-    },
-    {
         name: 'Flutter',
         imageURL: `${commonPath}/flutter-logo.png`,
     },

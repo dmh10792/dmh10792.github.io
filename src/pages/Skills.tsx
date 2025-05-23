@@ -27,23 +27,10 @@ const Skills = () => {
       };
 
     return (
-            <div 
-                className="p-8"
-                // style={{
-                //     display: 'flex',
-                //     maxHeight: '97%',
-                //     marginTop: '2%',
-                //     overflow: 'auto',
-                //     msOverflowStyle: 'none',
-                //     scrollbarWidth: 'none',
-                //     marginLeft: '3%',
-                // }}
-            >
+            <div className="p-8" >
                 
 
-                <div
-                    className="text-center"
-                >
+                <div className="text-center">
                     <Typography
                         variant={'h6'}
                         fontFamily={'sans-serif'}
@@ -53,15 +40,7 @@ const Skills = () => {
                     </Typography>
                 </div>
 
-                <div
-                    className="flex "
-                    // style={{
-                    //     flex: 1,
-                    //     overflowY: 'auto',
-                    //     msOverflowStyle: 'none',
-                    //     scrollbarWidth: 'none',
-                    // }}
-                >
+                <div className="flex ">
                     <Carousel 
                         responsive={responsive}
                         swipeable={true}
