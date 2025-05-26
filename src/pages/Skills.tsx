@@ -24,10 +24,10 @@ const Skills = () => {
           breakpoint: { max: 464, min: 0 },
           items: 1
         }
-      };
+    };
 
     return (
-            <div className="p-8" >
+            <div>
                 
 
                 <div className="text-center">
@@ -35,6 +35,7 @@ const Skills = () => {
                         variant={'h6'}
                         fontFamily={'sans-serif'}
                         color={'white'}
+                        className="p-8"
                     >
                         As a dedicated industry professional, I am committed to lifelong learning and the continuous development of new expertise. Below is a selection of my key skills and competencies.
                     </Typography>

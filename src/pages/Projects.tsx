@@ -1,7 +1,8 @@
-import {Box, IconButton, Stack, Typography} from "@mui/material";
+import {Box,Typography} from "@mui/material";
 import ProjectTile from "../components/ProjectTile.tsx";
 import {projects} from "../helpers/projects.ts";
-import { useState } from 'react';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 const Projects = () => {
 
@@ -9,42 +10,25 @@ const Projects = () => {
         return <ProjectTile key={key} project={project}/>
     })
 
-    const projectsLength: number = projectCards.length;
-    
-    const [selectedIndex, setSelectedIndex] = useState(0);
-    const [selectedProject, setSelectedProject] = useState<JSX.Element>(projectCards[0]);
-
-    const moveSelectionLeft = () => {
-        if(selectedIndex == 0) {//if at the beginning of the list
-            //move to the end
-            setSelectedProject(projectCards[projectsLength - 1]);
-            setSelectedIndex(projectsLength - 1);
-        } else {
-            //move to the left
-            setSelectedProject(projectCards[selectedIndex - 1]);
-            setSelectedIndex(selectedIndex - 1);
+    const responsive = {
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 1
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 1
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
         }
-    }
-
-    const moveSelectionRight = () => {
-        if(selectedIndex == projectsLength - 1) {//if at the end
-            //move to the beginning
-            setSelectedProject(projectCards[0]);
-            setSelectedIndex(0);
-        } else {
-            //move to the right
-            setSelectedProject(projectCards[selectedIndex + 1]);
-            setSelectedIndex(selectedIndex + 1);
-        }
-    }
+    };
 
     return (
-        <Box
+        <Box className="flex flex-col items-center w-full place-items-center
+                my-50"
             component={"section"}
-            sx={{
-                justifyItems: 'center',
-                marginY: '10%',
-            }}
         >
             <Typography
                 variant={'h3'}
@@ -56,27 +40,19 @@ const Projects = () => {
                 Projects
             </Typography>
 
-            <Stack direction={"row"}>
-                <IconButton onClick={moveSelectionLeft} >
-                    <img 
-                        src='/src/assets/icons/icons8-previous-48.png'
-                        alt='Move left icon'
-                        style={{
-                            width: '100%',
-                        }}
-                    />
-                </IconButton>
-                {selectedProject}
-                <IconButton onClick={moveSelectionRight} >
-                    <img 
-                        src='/src/assets/icons/icons8-right-button-48.png'
-                        alt='Move right icon'
-                        style={{
-                            width: '100%',
-                        }}
-                    />
-                </IconButton>
-            </Stack>
+            <Carousel 
+                className="min-w-3/4 max-w-3/5"
+                responsive={responsive}
+                infinite={true}
+                showDots={true}
+                arrows={false}
+                autoPlay={true}
+                autoPlaySpeed={2500}
+                transitionDuration={1000}
+            >
+                {projectCards}
+            </Carousel>;
+
             
         </Box>
     )

@@ -1,9 +1,9 @@
 
-import Typography from '@mui/material/Typography';
 import {ProjectType} from "../types.ts";
-import {Box, Stack} from "@mui/material";
+import {Stack} from "@mui/material";
 import { useEffect } from 'react';
-import Carousel from 'react-material-ui-carousel';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 type props = {
     project: ProjectType,
@@ -12,6 +12,21 @@ type props = {
 const ProjectTile = ({project}: props) => {
 
     const images :React.ReactElement[] = [];
+
+    const responsive = {
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 1
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 1
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
+    };
 
     useEffect(() => {
         project.images.forEach((imageUrl) => {
@@ -30,52 +45,30 @@ const ProjectTile = ({project}: props) => {
     return (
         <Stack
             direction={"row"}
-            sx={{
-                marginX: '10%',
-                height: '20%',
-            }}
         >
-          
-            <Carousel
-                navButtonsWrapperProps={{
-                    style: {
-                        
-                    }
-                }}
-                sx={{
-                    width: '50%',
-                    height: '100%',
-                    flex: '1 0 auto',
-                    marginRight: '5%'
-                }}
+
+            <Carousel 
+                className="min-w-150 min-h-80 mr-10"
+                responsive={responsive}
+                autoPlaySpeed={2500}
+                transitionDuration={1000}
+                autoPlay={true}
+                infinite={true}
+                arrows={false}
             >
                 {images}
             </Carousel>
-            <Box sx={{ 
-                display: 'flex', 
-                flexDirection: 'column', 
-                fontFamily: 'sans-serif',
-                marginTop: '4%'
-                }}>
-                    <Typography
-                        variant={'h4'}
-                        color={'white'}
-                        fontFamily={'sans-serif'}
-                        fontStyle={'italic'}
-                        mb={2}
-                    >
-                        {project.title}
-                    </Typography>
-                    <Typography
-                        variant={'h5'}
-                        color={'white'}
-                        fontFamily={'sans-serif'}
-                        fontSize={'large'}
-                        ml={1}
-                    >
-                        {project.description}
-                    </Typography>
-            </Box>
+
+            <div className='w-full/2 text-white font-sans'>
+                <h2 
+                    className='text-3xl pb-4'
+                >
+                    {project.title}
+                </h2>
+                <p className='text-xl'>
+                    {project.description}
+                </p>
+            </div>
         </Stack>
     );
 };
