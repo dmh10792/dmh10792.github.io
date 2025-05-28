@@ -26,9 +26,9 @@ const Projects = () => {
     };
 
     return (
-        <Box className="flex flex-col items-center w-full place-items-center
-                my-50"
-            component={"section"}
+        <Box id="Projects" className="flex flex-col items-center w-full place-items-center
+                my-80"
+            component={"section"}//this might be causing the spacing problem
         >
             <Typography
                 variant={'h3'}

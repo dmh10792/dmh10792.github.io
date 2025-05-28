@@ -14,26 +14,33 @@ import {Colors} from "../../AppHelper.ts";
 
 
 const NavBar = () => {
-    const pages = ['Experience', 'Skills', 'Projects', 'Contact'];
+    const pages = ['Projects', 'Skills', 'Experience', 'Contact'];
+
+    const handleScroll = (sectionName: string) => {
+        const section = document.getElementById(sectionName);
+        section?.scrollIntoView({behavior: "smooth"});
+    }
 
     return (
         <AppBar
             position="sticky"
             sx={{
-                bgcolor: 'black',
+                bgcolor: '#1f1e1e',
                 width: '100%',
                 borderBottom: ''
             }}
         >
-            <Container maxWidth="xl">
+            <Container maxWidth={false}>
                 <Toolbar disableGutters>
                     <Tooltip title="Back to the top">
-                        <Typography
-                            fontFamily={'sans-serif'}
-                            fontSize={'xx-large'}
-                        >
-                            Desmond Herring
-                        </Typography>
+                        <button onClick={() => handleScroll("Home")}>
+                            <Typography
+                                fontFamily={'sans-serif'}
+                                fontSize={'xx-large'}
+                            >
+                                Desmond Herring
+                            </Typography>
+                        </button>
                     </Tooltip>
 
                     <Stack direction={'row'} ml={2}>
@@ -54,6 +61,7 @@ const NavBar = () => {
                             {pages.map((page) => (
                                 <Button
                                     key={page}
+                                    onClick={() => handleScroll(page)}
                                     sx={{
                                         my: 2,
                                         color: 'white',

@@ -8,7 +8,7 @@ const Home = () => {
     const titles = ["Developer", "Professor", "Veteran"];
 
     return (
-        <Box className="my-62" >
+        <Box id="Home" className="my-80" >
 
             <Stack
                 ml={20}

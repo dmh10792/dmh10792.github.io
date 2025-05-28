@@ -4,6 +4,7 @@ const Contact = () => {
 
     return (
             <Stack
+                id="Contact"
                 className="text-center"
                 gap={2}
                 sx={{

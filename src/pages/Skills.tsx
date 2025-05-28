@@ -27,10 +27,19 @@ const Skills = () => {
     };
 
     return (
-            <div>
+            <div id="Skills" className="my-80 text-center">
                 
+                <Typography
+                    variant={'h3'}
+                    color={'white'}
+                    fontFamily={'sans-serif'}
+                    fontWeight={'lighter'}
+                    mb={5}
+                >
+                    Skills
+                </Typography>
 
-                <div className="text-center">
+                <div>
                     <Typography
                         variant={'h6'}
                         fontFamily={'sans-serif'}
