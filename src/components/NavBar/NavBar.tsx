@@ -18,7 +18,7 @@ const NavBar = () => {
 
     const handleScroll = (sectionName: string) => {
         const section = document.getElementById(sectionName);
-        section?.scrollIntoView({behavior: "smooth"});
+        section?.scrollIntoView({behavior: "smooth", block: "center"});
     }
 
     return (
