@@ -1,9 +1,9 @@
-import { Button, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 
 const Contact = () => {
 
     return (
-        <div id="Contact" className="inline-block my-60 text-center content-center" >
+        <Box id="Contact" component={'section'} className="inline-block my-60 text-center w-full" >
 
             <Typography
                 variant={"h3"}
@@ -17,8 +17,7 @@ const Contact = () => {
                 color="white"
                 sx={{
                     marginY: '5%',
-                    alignSelf: 'center',
-                    border: '1px solid green'
+
                 }}
             >
                 Either complete the form on the right or click the email button below to use your default mail app.
@@ -33,7 +32,7 @@ const Contact = () => {
             >
                 Email
             </Button>
-        </div>
+        </Box>
     )
 }
 
