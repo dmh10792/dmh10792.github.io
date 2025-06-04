@@ -1,44 +1,39 @@
-import {Button, Stack, Typography} from "@mui/material";
+import { Button, Typography } from "@mui/material";
 
 const Contact = () => {
 
     return (
-            <Stack
-                id="Contact"
-                className="text-center"
-                gap={2}
+        <div id="Contact" className="inline-block my-60 text-center content-center" >
+
+            <Typography
+                variant={"h3"}
+                color="white"
+            >
+                I'd love to hear from you!
+            </Typography>
+
+            <Typography
+                variant={"h4"}
+                color="white"
                 sx={{
-                    marginTop: '5%',
-                    flex: 1,
+                    marginY: '5%',
+                    alignSelf: 'center',
+                    border: '1px solid green'
                 }}
             >
-                <Typography
-                    variant={"h3"}
-                    color="white"
-                >
-                    I'd love to hear from you!
-                </Typography>
+                Either complete the form on the right or click the email button below to use your default mail app.
+            </Typography>
 
-                <Typography
-                    variant={"h4"}
-                    color="white"
-                >
-                    Either complete the form on the right or click the email button below to use your default mail app.
-                </Typography>
-
-                <Button
-                    variant='contained'
-                    href='mailto:desmond.herring@outlook.com'
-                    sx={{
-                        width: '30%',
-                        alignSelf: 'center',
-                        marginBottom: '10%'
-                    }}
-                >
-                    Email
-                </Button>
-
-            </Stack>
+            <Button
+                variant='contained'
+                href='mailto:desmond.herring@outlook.com'
+                sx={{
+                    width: '30%',
+                }}
+            >
+                Email
+            </Button>
+        </div>
     )
 }
 
