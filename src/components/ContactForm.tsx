@@ -8,6 +8,10 @@ type userMessage = {
     message: string
 }
 
+/**
+ * No longer used, leaving here for reference
+ */
+
 const ContactForm = () => {
 
     const [name, setName] = useState('');

@@ -1,7 +1,6 @@
 //Utilities
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import { experiences } from '../../helpers/experience';
-import { JobExperience } from '../../types';
 
 //Components
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -9,17 +8,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 //CSS
 import 'react-vertical-timeline-component/style.min.css';
-import './Experience.css';
-import ExperienceModal from '../../components/ExperienceModal';
-import { useState } from 'react';
-import {borderRadiusInner, borderRadiusOuter} from "../../AppHelper.ts";
-import {Button, Stack, Typography} from "@mui/material";
+import {Stack, Typography} from "@mui/material";
 
 
 const Experience = () => {
-
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const [selectedExperience, setSelectedExperience] = useState<JobExperience>(experiences[0]);
 
     const history :React.ReactElement[]= experiences.map((experience, key) => {
 
@@ -29,19 +21,16 @@ const Experience = () => {
             <VerticalTimelineElement
                 id='Experience'
                 key={key}
-                className="experience-element"
                 contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                 date={dateRange}
+                className='text-left'
                 iconStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 icon={<FontAwesomeIcon icon={experience.icon} className="experience-icon"/>}
-                onTimelineElementClick={()=>handleClick(experience)}
-                style={{
-                    borderRadius: `${borderRadiusOuter}`,
-                }}
+                
             >
                 <Stack spacing={1}>
-                    <img className='experience-image' alt='experience image' src={experience.picture} style={{ borderRadius: `${borderRadiusInner}`}}/>
+                    <img className='rounded-sm' alt='experience image' src={experience.picture} />
 
                     <Typography variant={'h5'}>
                         {experience.title}
@@ -51,22 +40,10 @@ const Experience = () => {
                     <p className='experience-description'>
                         {experience.description}
                     </p>
-                        <Button
-                            variant={'contained'}
-                            sx={{width: 'fit-content'}}
-                            onClick={() => setIsModalOpen(true)}
-                        >
-                            Details
-                        </Button>
                 </Stack>
             </VerticalTimelineElement>
         )
     })
-
-    const handleClick = (experience: JobExperience) => {
-        setSelectedExperience(experience)
-        setIsModalOpen(true);
-    }
 
     return (
         <div id='Experience' className="my-80 text-center">
@@ -87,8 +64,6 @@ const Experience = () => {
                     </VerticalTimeline>
                 </div>
             </div>
-
-            <ExperienceModal open={isModalOpen} experience={selectedExperience} setOpen={setIsModalOpen}/>
         </div>
     )
 }

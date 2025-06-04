@@ -8,11 +8,11 @@ type props = {
 const SkillBox = ({skill}: props) => {
 
     return (
-        <Box className="flex flex-col items-center min-h-40 mx-10 rounded-lg max-w-48 pt-5" >
+        <Box className="flex flex-col items-center min-h-40 mx-10 rounded-lg max-w-48 pt-5 bg-gray-600 shadow-2xl" >
             <img
                 src={skill.imageURL}
                 alt='skill image'
-                className="h-20 w-25 mb-5"
+                className="h-20 w-1/2 mb-5"
             />
             <Typography
                 flex={1}

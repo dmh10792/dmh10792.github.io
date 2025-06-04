@@ -8,7 +8,6 @@ import Tooltip from '@mui/material/Tooltip';
 import {Stack} from "@mui/material";
 import LinkedInLink from "../Links/LinkedinLink/LinkedinLink.tsx";
 import GithubLink from "../Links/GithubLink/GithubLink.tsx";
-import ResumeLink from "../Links/ResumeLink/ResumeLink.tsx";
 import TwitterLink from "../Links/TwitterLink/TwitterLink.tsx";
 import {Colors} from "../../AppHelper.ts";
 import { scroller } from 'react-scroll';
@@ -18,10 +17,13 @@ const NavBar = () => {
     const pages = ['Projects', 'Skills', 'Experience', 'Contact'];
 
     const handleScroll = (sectionName: string) => {
+
+        const offset = pages.includes(sectionName) ? -200 : -350;
+
         scroller.scrollTo(sectionName, {
             duration: 500,
             smooth: true, // Smooth scroll
-            offset: -100, // Offset to account for the fixed header
+            offset: offset, // Offset to account for the fixed header
         });
     }
 
@@ -52,7 +54,7 @@ const NavBar = () => {
                         <LinkedInLink/>
                         <GithubLink/>
                         <TwitterLink/>
-                        <ResumeLink/>
+                        {/* <ResumeLink/> */}
                     </Stack>
 
                     <Box
