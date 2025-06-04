@@ -11,14 +11,18 @@ import GithubLink from "../Links/GithubLink/GithubLink.tsx";
 import ResumeLink from "../Links/ResumeLink/ResumeLink.tsx";
 import TwitterLink from "../Links/TwitterLink/TwitterLink.tsx";
 import {Colors} from "../../AppHelper.ts";
+import { scroller } from 'react-scroll';
 
 
 const NavBar = () => {
     const pages = ['Projects', 'Skills', 'Experience', 'Contact'];
 
     const handleScroll = (sectionName: string) => {
-        const section = document.getElementById(sectionName);
-        section?.scrollIntoView({behavior: "smooth", block: "center"});
+        scroller.scrollTo(sectionName, {
+            duration: 500,
+            smooth: true, // Smooth scroll
+            offset: -100, // Offset to account for the fixed header
+        });
     }
 
     return (
@@ -27,7 +31,8 @@ const NavBar = () => {
             sx={{
                 bgcolor: '#1f1e1e',
                 width: '100%',
-                borderBottom: ''
+                borderBottom: '',
+                scrollMarginTop: '30%'
             }}
         >
             <Container maxWidth={false}>

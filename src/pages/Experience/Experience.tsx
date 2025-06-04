@@ -29,7 +29,7 @@ const Experience = () => {
             <VerticalTimelineElement
                 id='Experience'
                 key={key}
-                className="experience-element" 
+                className="experience-element"
                 contentStyle={{ background: 'rgb(33, 150, 243)', color: '#fff' }}
                 contentArrowStyle={{ borderRight: '7px solid  rgb(33, 150, 243)' }}
                 date={dateRange}
@@ -69,7 +69,7 @@ const Experience = () => {
     }
 
     return (
-        <div className="my-80 text-center">
+        <div id='Experience' className="my-80 text-center">
             <div className='experience-container text-center'>
                 <Typography
                     variant={'h2'}
