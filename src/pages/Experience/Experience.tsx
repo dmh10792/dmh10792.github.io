@@ -46,15 +46,13 @@ const Experience = () => {
     })
 
     return (
-        <div id='Experience' className="my-80 text-center">
+        <div id='Experience' className=" text-center">
             <div className='experience-container text-center'>
                 <Typography
                     variant={'h2'}
                     fontFamily={'sans-serif'}
                     fontWeight={'500'}
                     color={'white'}
-                    mb={10}
-                    
                 >
                     Experiences
                 </Typography>
