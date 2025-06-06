@@ -27,7 +27,12 @@ const App = () => {
     });
 
     if(isMobile) {
-        return <MobileBanner/>
+        return (
+            <>
+                <NavBar/>
+                <MobileBanner/>
+            </>
+        )
     }
 
     return (

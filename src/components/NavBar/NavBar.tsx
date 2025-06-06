@@ -18,7 +18,7 @@ const NavBar = () => {
 
     const handleScroll = (sectionName: string) => {
 
-        const offset = pages.includes(sectionName) ? -200 : -350;
+        const offset = pages.includes(sectionName) ? -150 : -350;
 
         scroller.scrollTo(sectionName, {
             duration: 500,

@@ -28,30 +28,32 @@ const Projects = () => {
     return (
         <Box id="Projects" className="flex flex-col items-center w-full place-items-center
                 my-80"
-            component={"section"}//this might be causing the spacing problem
+            sx={{
+                minHeight: '75vh'
+            }}
         >
             <Typography
                 variant={'h3'}
                 color={'white'}
-                fontFamily={'sans-serif'}
+                fontFamily={'serif'}
                 fontWeight={'lighter'}
-                mb={5}
+                mb={10}
             >
                 Projects
             </Typography>
 
             <Carousel 
-                className="min-w-3/4 max-w-3/5"
+                className="min-w-3/4 max-w-[95%]"
                 responsive={responsive}
                 infinite={true}
-                showDots={true}
-                arrows={false}
                 autoPlay={true}
-                autoPlaySpeed={2500}
+                arrows={false}
+                showDots={true}
+                autoPlaySpeed={10000}
                 transitionDuration={1000}
             >
                 {projectCards}
-            </Carousel>;
+            </Carousel>
 
             
         </Box>

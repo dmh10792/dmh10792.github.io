@@ -35,7 +35,8 @@ const ProjectTile = ({project}: props) => {
                 src={imageUrl} 
                 alt={`${project.title} slideshow image`}
                 style={{
-                    width: '100%',
+                    width: '90%',
+                    maxHeight: '95%',
                 }}
             />
             )
@@ -45,10 +46,11 @@ const ProjectTile = ({project}: props) => {
     return (
         <Stack
             direction={"row"}
+            flex={1}
         >
 
             <Carousel 
-                className="min-w-150 min-h-80 mr-10"
+                className="min-w-150 mr-5 max-w-[50%] max-h-[40%]"
                 responsive={responsive}
                 autoPlaySpeed={2500}
                 transitionDuration={1000}
@@ -59,7 +61,7 @@ const ProjectTile = ({project}: props) => {
                 {images}
             </Carousel>
 
-            <div className='w-full/2 text-white font-sans'>
+            <div className='w-full/2 text-white font-sans mt-[2%]'>
                 <h2 
                     className='text-3xl pb-4'
                 >

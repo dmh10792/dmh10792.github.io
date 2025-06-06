@@ -1,18 +1,27 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 
 
 const MobileBanner = () => {
     return (
-        <div>
+        <Box
+            className='text-center h-full mt-30'
+        >
             <Typography
                 variant="h1"
                 color="white"
-                fontFamily={'sans-serif'}
+                fontFamily={'serif'}
             >
                 Mobile friendly site coming soon!
             </Typography>
-        </div>
+            <Typography
+                variant='h6'
+                color="white"
+                mt={8}
+            >
+                Please check back later. Im always making improvements!
+            </Typography>
+        </Box>
     );
 };
 
