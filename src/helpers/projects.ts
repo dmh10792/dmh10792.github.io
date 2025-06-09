@@ -1,6 +1,6 @@
 import {ProjectType} from "../types.ts";
 
-const commonPath :string = '/src/assets/images/projects';
+const commonPath :string = './assets/images/projects';
 
 
 

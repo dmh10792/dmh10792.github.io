@@ -1,13 +1,13 @@
 import { JobExperience } from "../types";
 import { faMountain, faCode, faPaperPlane, faEarthEurope, faParachuteBox } from '@fortawesome/free-solid-svg-icons';
 
-const commonPath :string = '/src/assets/images/experiences';
+const commonPath :string = './assets/images/experiences';
 
 export const experiences : JobExperience[] = [
     {
         title: 'Software Development Engineer',
         company: 'Army Software Factory, Army Futures Command',
-        startDate: 'July 2024',
+        startDate: 'July 2024', 
         endDate: 'Present',
         description: `In this position I design, develop, and deploy applications with a focus on high
                     availability, low latency, and scalability. I work as a part of a balanced team to implement user

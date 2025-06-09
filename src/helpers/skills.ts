@@ -1,7 +1,7 @@
 import { SkillType } from "../types";
 
 
-const commonPath :string = '/src/assets/images/skills';
+const commonPath :string = './assets/images/skills';
 
 export const skills :SkillType[] = [
     {
