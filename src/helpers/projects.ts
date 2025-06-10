@@ -6,7 +6,7 @@ const commonPath :string = './assets/images/projects';
 
 const getImageNames = (projectName: string) :string[]=> {
    
-    const files = import.meta.glob(`/src/assets/images/projects/*/*.{png,jpg,jpeg,svg}`, {eager: true});
+    const files = import.meta.glob(`/public/assets/images/projects/*/*.{png,jpg,jpeg,svg}`, {eager: true});
     let imagePaths = Object.keys(files);
     imagePaths = imagePaths.filter(string => string.includes(projectName));
       

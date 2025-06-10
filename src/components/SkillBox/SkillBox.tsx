@@ -12,7 +12,7 @@ const SkillBox = ({skill}: props) => {
             <img
                 src={skill.imageURL}
                 alt='skill image'
-                className="h-20 w-1/2 mb-5"
+                className="h-20 w-1/2 mb-5"  
             />
             <Typography
                 flex={1}
