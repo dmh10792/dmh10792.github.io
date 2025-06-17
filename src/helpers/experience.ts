@@ -1,7 +1,7 @@
 import { JobExperience } from "../types";
 import { faMountain, faCode, faPaperPlane, faEarthEurope, faParachuteBox } from '@fortawesome/free-solid-svg-icons';
 
-const commonPath :string = './assets/images/experiences';
+const commonPath :string = '/assets/images/experiences';
 
 export const experiences : JobExperience[] = [
     {

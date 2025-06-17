@@ -1,17 +1,10 @@
 import {ProjectType} from "../types.ts";
 
-const commonPath :string = './assets/images/projects';
+const commonPath :string = '/assets/images/projects';
 
+const abrPath: string = `${commonPath}/airborneready`
 
-
-const getImageNames = (projectName: string) :string[]=> {
-   
-    const files = import.meta.glob(`/public/assets/images/projects/*/*.{png,jpg,jpeg,svg}`, {eager: true});
-    let imagePaths = Object.keys(files);
-    imagePaths = imagePaths.filter(string => string.includes(projectName));
-      
-    return imagePaths
-}
+const rtlPath: string = `${commonPath}/retrolyft`
 
 export const projects: ProjectType[] = [
     {
@@ -21,7 +14,12 @@ export const projects: ProjectType[] = [
                     + "for commanders to recieve semi-accurate readiness data for their organization. Upon the introduction of this application those man hours were reduced to just minutes "
                     + "and commanders were able to get instant and accurate metrics for readiness and planning.",
         imageURL: `${commonPath}/airborneready/1abrSplashPage.png`,
-        images: getImageNames('airborneready')
+        images: [
+            `${abrPath}/1abrSplashPage.png`,
+            `${abrPath}/abrDashboard.png`,
+            `${abrPath}/abrJumplog.png`,
+            `${abrPath}/abrRoster.png`,
+        ]
     },
     {
         title: 'RetroLyft',
@@ -29,6 +27,9 @@ export const projects: ProjectType[] = [
             "action items as well as trends and metrics for the individual teams. It was planned to expand to be an all inclusive retro facilitation application, but was sidelined to prioritize " +
             "work on Airborne Ready.",
         imageURL: `${commonPath}/retrolyft/1retrolyftDashboard.png.png`,
-        images: getImageNames('retrolyft')
+        images: [
+            `${rtlPath}/1retrolyftDashboard.png`,
+            `${rtlPath}/retrolyftArchive.png`,
+        ]
     },
 ]
